@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+  --color-primary-50:  #e5f0ff;
+--color-primary-100: #b8d3ff;
+--color-primary-200: #85b4ff;
+--color-primary-300: #4c8eff;
+--color-primary-400: #1f6fff;
+--color-primary-500: #0052ff; 
+--color-primary-600: #0043cc;
+--color-primary-700: #0035a3;
+--color-primary-800: #00297d;
+--color-primary-900: #001f61;
+--color-primary-950: #001244;
+--color-orange-50:  #fff4e6;
+--color-orange-100: #ffd9b3;
+--color-orange-200: #ffb566;
+--color-orange-300: #ff9122;
+--color-orange-400: #ff7900; 
+--color-orange-500: #db6400;
+--color-orange-600: #b75000;
+--color-orange-700: #933f00;
+--color-orange-800: #6f3000;
+--color-orange-900: #552400;
+--color-orange-950: #2e1300;
+  
+}
+
+
+
+:root {
+  --ui-primary: var(--color-primary-900);
+  --ui-primary-dark: var(--color-primary-950);
+  --ui-light-blue: var(--color-primary-200);
+  --ui-secondary: var(--color-orange-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
