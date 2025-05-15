@@ -54,7 +54,7 @@
         <img
           src="~assets/pngs/superhero.png"
           alt="Diversity in Tech"
-          class="w-full h-[400px] object-cover rounded-lg shadow-lg"
+          class="w-full h-[500px] object-cover object-top rounded-lg shadow-lg"
         />
       </div>
     </div>
