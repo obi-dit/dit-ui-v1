@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { boolean } from "boolean";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   imports: {
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      inStaging: boolean(process.env.NUXT_IN_STAGING) || false,
+      inStaging: Boolean(process.env.NUXT_IN_STAGING) || false,
       uiDomain: process.env.NUXT_UI_DOMAIN,
       uiTopleveldomain: process.env.NUXT_UI_TOPLEVELDOMAIN,
       uiUrl: process.env.NUXT_UI_URL,
