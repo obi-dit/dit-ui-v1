@@ -11,7 +11,7 @@
         />
       </div>
       <h2 class="text-2xl font-bold text-primary mb-6 text-center">
-        Create an Account
+        Verify Your Email
       </h2>
 
       <UForm
@@ -21,35 +21,17 @@
         @submit="onSubmit"
       >
         <UFormField
-          label="First Name"
-          name="firstName"
+          label="Verification Token"
+          name="token"
         >
-          <UInput v-model="state.firstName" />
+          <UInput v-model="state.token" />
         </UFormField>
-        <UFormField
-          label="Last Name"
-          name="lastName"
+        <p
+          class="text-primary cursor-pointer"
+          @click.prevent="requestNewToken"
         >
-          <UInput v-model="state.lastName" />
-        </UFormField>
-
-        <UFormField
-          label="Email"
-          name="email"
-        >
-          <UInput v-model="state.email" />
-        </UFormField>
-
-        <UFormField
-          label="Password"
-          name="password"
-        >
-          <UInput
-            v-model="state.password"
-            type="password"
-          />
-        </UFormField>
-
+          Request new token
+        </p>
         <UButton
           type="submit"
           class="block bg-secondary hover:bg-secondary text-white w-full py-3 rounded-lg font-semibold transition text-center"
@@ -70,29 +52,20 @@ import * as v from "valibot";
 import type { FormSubmitEvent } from "@nuxt/ui";
 
 const schema = v.object({
-  firstName: v.pipe(
-    v.string(),
-    v.minLength(3, "First Name must be at least 3"),
-  ),
-  lastName: v.pipe(v.string(), v.minLength(3, "Last Name must be at least 3")),
-  email: v.pipe(v.string(), v.email("Invalid email")),
-  password: v.pipe(v.string(), v.minLength(8, "Must be at least 8 characters")),
+  token: v.pipe(v.string(), v.nonEmpty("Please enter token")),
 });
 
 type Schema = v.InferOutput<typeof schema>;
 const user = useUser();
 
 const state = reactive({
-  email: "",
-  password: "",
-  firstName: "",
-  lastName: "",
+  token: "",
 });
 
 const toast = useToast();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   try {
-    const responseJson = await useRequest("auth/register", {
+    const responseJson = await useRequest("auth/verify-token", {
       method: "POST",
       body: {
         ...state,
@@ -105,22 +78,28 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         color: "success",
       });
     }
-
-    const responseData =
-      responseJson._data as RegistrationResponse<UserProfileType>;
-
-    await user.setUserRegistrationDataPoint(
-      responseData.accessToken,
-      responseData.user,
-    );
-
-    if (!user.isVerifiedUser) {
-      return navigateTo("/auth/verify");
-    }
   } catch (error) {
-    useHandlingGlobalErrorMessages(error, "registering user");
+    useHandlingGlobalErrorMessages(error, "verifying email");
   }
 }
+
+const requestNewToken = async () => {
+  try {
+    const responseJson = await useRequest("auth/request-token", {
+      method: "GET",
+    });
+
+    if (successCodes.includes(responseJson.status)) {
+      user.getMe();
+      toast.add({
+        description: `Successful`,
+        color: "success",
+      });
+    }
+  } catch (error) {
+    useHandlingGlobalErrorMessages(error, "requesting token");
+  }
+};
 </script>
 
 <style scoped></style>

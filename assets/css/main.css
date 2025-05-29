@@ -25,7 +25,7 @@
 --color-orange-800: #6f3000;
 --color-orange-900: #552400;
 --color-orange-950: #2e1300;
-  
+--color-gray-100:   #d1d5db;
 }
 
 
@@ -39,6 +39,7 @@
   --ui-info: var(--ui-color-info-500);
   --ui-warning: var(--ui-color-warning-500);
   --ui-error: var(--ui-color-error-500);
+  --ui-border-accented: var(--color-gray-100);
 }
 
 body{

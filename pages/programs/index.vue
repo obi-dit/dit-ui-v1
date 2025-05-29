@@ -2,7 +2,6 @@
   <section
     class="pages entry programs bg-primary text-primary px-6 md:px-16 overflow-hidden overflow-y-auto"
   >
-    <MainNavbar class="sticky z-50 bg-primary top-0" />
     <div class="max-w-7xl mx-auto mt-12">
       <!-- Section Header -->
       <div class="text-center mb-12">
@@ -32,7 +31,6 @@
         />
       </div>
     </div>
-
     <Footer />
   </section>
 </template>

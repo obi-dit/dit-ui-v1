@@ -14,16 +14,29 @@
         Login to Your Account
       </h2>
 
-      <form class="space-y-6" @submit.prevent="login">
+      <form
+        class="space-y-6"
+        @submit.prevent="login"
+      >
         <div>
           <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input v-model="email" type="email" required class="input" />
+          <input
+            v-model="email"
+            type="email"
+            required
+            class="input"
+          />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700"
             >Password</label
           >
-          <input v-model="password" type="password" required class="input" />
+          <input
+            v-model="password"
+            type="password"
+            required
+            class="input"
+          />
         </div>
 
         <button
@@ -36,7 +49,7 @@
         <p class="text-sm text-gray-600 text-center mt-4">
           Don't have an account?
           <NuxtLink
-            to="/register"
+            to="/auth/register"
             class="text-primary font-semibold hover:underline"
             >Register</NuxtLink
           >

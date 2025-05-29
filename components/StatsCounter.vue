@@ -9,7 +9,10 @@
         :key="index"
         class="flex flex-col items-center"
       >
-        <NuxtIcon :name="item.icon" class="text-accent-blue text-5xl mb-4" />
+        <NuxtIcon
+          :name="item.icon"
+          class="text-accent-blue text-5xl mb-4"
+        />
         <p class="text-4xl font-bold text-primary">{{ item.current }}</p>
         <p class="text-lg text-gray-600">{{ item.label }}</p>
       </div>

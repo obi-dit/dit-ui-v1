@@ -16,6 +16,7 @@
 
     <button
       class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md w-full"
+      @click.prevent="gotoToEnrollPage"
     >
       Enroll Now
     </button>
@@ -29,4 +30,8 @@ defineProps({
   installmentFee: Number,
   totalCost: String,
 });
+
+const gotoToEnrollPage = () => {
+  navigateTo("/programs/enroll");
+};
 </script>

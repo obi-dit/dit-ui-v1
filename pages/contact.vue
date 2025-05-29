@@ -2,7 +2,6 @@
   <section
     class="pages entry contact bg-primary text-primary px-6 md:px-16 overflow-hidden overflow-y-auto"
   >
-    <MainNavbar class="sticky z-50 bg-primary top-0" />
     <div class="text-center mb-12 mt-12">
       <h1 class="text-3xl md:text-4xl font-bold mb-4 text-white">Contact Us</h1>
       <p class="text-white max-w-xl mx-auto">
@@ -16,7 +15,10 @@
         class="space-y-6 bg-gray-50 p-8 rounded-xl shadow relative"
         @submit.prevent="handleSubmit"
       >
-        <transition name="fade" mode="out-in">
+        <transition
+          name="fade"
+          mode="out-in"
+        >
           <div
             v-if="success"
             key="success"
@@ -58,7 +60,10 @@
           >
             Email
           </label>
-          <p v-if="!validEmail" class="text-red-500 text-sm mt-1">
+          <p
+            v-if="!validEmail"
+            class="text-red-500 text-sm mt-1"
+          >
             Please enter a valid email.
           </p>
         </div>
@@ -136,7 +141,7 @@ const form = ref({
 const success = ref(false);
 
 const validEmail = computed(() =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email)
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email),
 );
 
 function handleSubmit() {

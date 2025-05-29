@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-primary text-white px-6 py-10 mt-20">
+  <div class="bg-primary text-white px-6 py-10 mt-20">
     <div
       class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm"
     >
@@ -16,15 +16,33 @@
       <div>
         <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
         <ul class="space-y-2">
-          <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
           <li>
-            <NuxtLink to="/about" class="hover:underline">About</NuxtLink>
+            <NuxtLink
+              to="/"
+              class="hover:underline"
+              >Home</NuxtLink
+            >
           </li>
           <li>
-            <NuxtLink to="/programs" class="hover:underline">Programs</NuxtLink>
+            <NuxtLink
+              to="/about"
+              class="hover:underline"
+              >About</NuxtLink
+            >
           </li>
           <li>
-            <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
+            <NuxtLink
+              to="/programs"
+              class="hover:underline"
+              >Programs</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              to="/contact"
+              class="hover:underline"
+              >Contact</NuxtLink
+            >
           </li>
         </ul>
       </div>
@@ -35,7 +53,9 @@
         <p>306 South 7th Street<br />Suite 209B, Tacoma, WA 98402</p>
         <p class="mt-2">
           Email:
-          <a href="mailto:info@diversityintechnology.org" class="underline"
+          <a
+            href="mailto:info@diversityintechnology.org"
+            class="underline"
             >info@diversityintechnology.org</a
           >
         </p>
@@ -45,16 +65,32 @@
       <div>
         <h4 class="font-semibold text-lg mb-3">Connect with Us</h4>
         <div class="flex space-x-4 mt-2">
-          <a href="#" aria-label="Facebook" class="hover:text-secondary">
+          <a
+            href="#"
+            aria-label="Facebook"
+            class="hover:text-secondary"
+          >
             <i class="fab fa-facebook-f" />
           </a>
-          <a href="#" aria-label="Twitter" class="hover:text-secondary">
+          <a
+            href="#"
+            aria-label="Twitter"
+            class="hover:text-secondary"
+          >
             <i class="fab fa-twitter" />
           </a>
-          <a href="#" aria-label="LinkedIn" class="hover:text-secondary">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            class="hover:text-secondary"
+          >
             <i class="fab fa-linkedin-in" />
           </a>
-          <a href="#" aria-label="Instagram" class="hover:text-secondary">
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="hover:text-secondary"
+          >
             <i class="fab fa-instagram" />
           </a>
         </div>
@@ -68,7 +104,7 @@
       &copy; {{ new Date().getFullYear() }} Diversity In Technology. All rights
       reserved.
     </div>
-  </footer>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

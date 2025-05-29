@@ -2,7 +2,6 @@
   <div
     class="pages entry index text-white min-h-screen font-sans overflow-hidden overflow-y-auto"
   >
-    <MainNavbar class="sticky z-50 bg-primary top-0" />
     <div class="max-w-7xl mx-auto">
       <!-- Hero Section -->
       <HeroSection />
@@ -17,9 +16,8 @@
       <VideoShowcase />
 
       <Testimonials />
-
-      <Footer />
     </div>
+    <Footer />
   </div>
 </template>
 <style lang="scss">

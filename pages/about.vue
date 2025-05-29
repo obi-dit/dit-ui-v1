@@ -1,6 +1,5 @@
 <template>
   <section class="text-primary pages entry about">
-    <MainNavbar class="sticky z-50 bg-primary top-0" />
     <div class="max-w-6xl mx-auto py-16 px-6 md:px-16">
       <!-- Header -->
       <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-8">
@@ -39,7 +38,10 @@
         </h2>
         <div class="grid md:grid-cols-3 gap-8 text-center">
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon name="mdi:lightbulb-on-outline" class="text-4xl mb-4" />
+            <Icon
+              name="mdi:lightbulb-on-outline"
+              class="text-4xl mb-4"
+            />
             <h3 class="text-xl font-bold mb-2">Innovation</h3>
             <p>
               We inspire creative thinking through cutting-edge tech projects
@@ -47,7 +49,10 @@
             </p>
           </div>
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon name="mdi:account-group-outline" class="text-4xl mb-4" />
+            <Icon
+              name="mdi:account-group-outline"
+              class="text-4xl mb-4"
+            />
             <h3 class="text-xl font-bold mb-2">Inclusivity</h3>
             <p>
               DIT welcomes students from all backgrounds and encourages a
@@ -55,7 +60,10 @@
             </p>
           </div>
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon name="mdi:teach" class="text-4xl mb-4" />
+            <Icon
+              name="mdi:teach"
+              class="text-4xl mb-4"
+            />
             <h3 class="text-xl font-bold mb-2">Mentorship</h3>
             <p>
               Learn directly from tech professionals who guide and support
@@ -80,6 +88,7 @@
         </NuxtLink>
       </div>
     </div>
+
     <Footer />
   </section>
 </template>
