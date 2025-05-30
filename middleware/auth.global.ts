@@ -18,7 +18,13 @@ export default defineNuxtRouteMiddleware((to) => {
 
   // Define routes
   const authRoutes = ["auth-login", "auth-register", "auth-verify"];
-  const unloggedRoutes = ["index", "contact", "about"];
+  const unloggedRoutes = [
+    "index",
+    "contact",
+    "about",
+    "programs-enroll",
+    "programs",
+  ];
 
   // Redirect logged-in users away from auth pages
 

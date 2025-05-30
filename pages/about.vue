@@ -23,10 +23,10 @@
           </h2>
           <p class="text-white text-lg leading-relaxed">
             At DIT, our mission is to make technology education accessible, fun,
-            and meaningful for students aged 12 to 17. We believe that every
-            young mind deserves the opportunity to explore fields like
-            Artificial Intelligence, Web Development, and Digital Media in a
-            supportive and inclusive environment.
+            and meaningful for students aged 14 to 17, 18 to 24 and 25+. We
+            believe that every young mind deserves the opportunity to explore
+            fields like Artificial Intelligence, Web Development, and Digital
+            Media in a supportive and inclusive environment.
           </p>
         </div>
       </div>
@@ -38,10 +38,7 @@
         </h2>
         <div class="grid md:grid-cols-3 gap-8 text-center">
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon
-              name="mdi:lightbulb-on-outline"
-              class="text-4xl mb-4"
-            />
+            <Icon name="mdi:lightbulb-on-outline" class="text-4xl mb-4" />
             <h3 class="text-xl font-bold mb-2">Innovation</h3>
             <p>
               We inspire creative thinking through cutting-edge tech projects
@@ -49,10 +46,7 @@
             </p>
           </div>
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon
-              name="mdi:account-group-outline"
-              class="text-4xl mb-4"
-            />
+            <Icon name="mdi:account-group-outline" class="text-4xl mb-4" />
             <h3 class="text-xl font-bold mb-2">Inclusivity</h3>
             <p>
               DIT welcomes students from all backgrounds and encourages a
@@ -60,10 +54,7 @@
             </p>
           </div>
           <div class="bg-accent-blue text-white p-6 rounded-xl shadow">
-            <Icon
-              name="mdi:teach"
-              class="text-4xl mb-4"
-            />
+            <Icon name="mdi:teach" class="text-4xl mb-4" />
             <h3 class="text-xl font-bold mb-2">Mentorship</h3>
             <p>
               Learn directly from tech professionals who guide and support
