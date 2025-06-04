@@ -15,6 +15,20 @@ export default defineAppConfig({
       },
     },
 
+    select: {
+      slots: {
+        base: "h-full !w-full !h-[44px] !bg-transparent focus:border-transparent !text-primary",
+      },
+    },
+
+    textarea: {
+      slots: {
+        root: "w-full !h-[100px] ",
+        body: "",
+        base: "h-full !bg-transparent focus:border-transparent !text-primary",
+      },
+    },
+
     formField: {
       slots: {
         label: "text-gray-700",

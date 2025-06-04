@@ -24,6 +24,7 @@ export default defineNuxtRouteMiddleware((to) => {
     "about",
     "programs-enroll",
     "programs",
+    "programs-success",
   ];
 
   // Redirect logged-in users away from auth pages
@@ -39,7 +40,7 @@ export default defineNuxtRouteMiddleware((to) => {
 
   // Redirect unlogged users trying to access protected pages
   const isPublicPage = [...authRoutes, ...unloggedRoutes].includes(
-    to.name as string,
+    to.name as string
   );
   if (!user.isLogged && !isPublicPage) {
     console.log("here");

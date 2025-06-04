@@ -15,6 +15,7 @@
           class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
         >
           <button
+            @click.prevent="goToProgram"
             class="bg-accent-blue hover:bg-secondary text-white py-2 px-6 rounded cursor-pointer"
           >
             Join a Program
@@ -63,4 +64,7 @@
 
 <script setup lang="ts">
 // No script logic needed
+const goToProgram = () => {
+  navigateTo("/programs");
+};
 </script>

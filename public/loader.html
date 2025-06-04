@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIT Loader</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #f9fafb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .loader {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .letter {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #3b82f6; /* Tailwind's blue-500 */
+        animation: pulse 1.2s ease-in-out infinite;
+      }
+
+      .letter:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .letter:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .letter:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.4;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="letter">D</div>
+      <div class="letter">I</div>
+      <div class="letter">T</div>
+    </div>
+  </body>
+</html>

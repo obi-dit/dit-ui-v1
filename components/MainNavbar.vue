@@ -3,14 +3,8 @@
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center space-x-3">
-        <NuxtLink
-          to="/"
-          class="text-xl font-semibold"
-        >
-          <img
-            src="@/assets/pngs/DIT_Logo_Transparent.png"
-            class="h-16"
-          />
+        <NuxtLink to="/" class="text-xl font-semibold">
+          <img src="@/assets/pngs/DIT_Logo_Transparent.png" class="h-16" />
         </NuxtLink>
       </div>
 
@@ -53,23 +47,17 @@
       <!-- Navigation Links (Desktop) -->
       <ul class="hidden md:flex space-x-8 text-sm font-medium">
         <li>
-          <NuxtLink
-            to="/programs"
-            class="hover:text-secondary transition"
+          <NuxtLink to="/programs" class="hover:text-secondary transition"
             >Programs</NuxtLink
           >
         </li>
         <li>
-          <NuxtLink
-            to="/about"
-            class="hover:text-secondary transition"
+          <NuxtLink to="/about" class="hover:text-secondary transition"
             >About</NuxtLink
           >
         </li>
         <li>
-          <NuxtLink
-            to="/contact"
-            class="hover:text-secondary transition"
+          <NuxtLink to="/contact" class="hover:text-secondary transition"
             >Contact</NuxtLink
           >
         </li>
@@ -78,7 +66,7 @@
       <!-- Join Button (Desktop Only) -->
       <div class="hidden md:block">
         <button
-          class="bg-secondary hover:bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-lg transition"
+          class="bg-secondary cursor-pointer hover:bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-lg transition"
           @click="goToLogin"
         >
           Join a Program
@@ -91,19 +79,13 @@
       v-if="isOpen"
       class="md:hidden flex flex-col gap-4 mt-4 px-6 pb-4 bg-primary"
     >
-      <NuxtLink
-        to="/programs"
-        class="hover:text-secondary transition"
+      <NuxtLink to="/programs" class="hover:text-secondary transition"
         >Programs</NuxtLink
       >
-      <NuxtLink
-        to="/about"
-        class="hover:text-secondary transition"
+      <NuxtLink to="/about" class="hover:text-secondary transition"
         >About</NuxtLink
       >
-      <NuxtLink
-        to="/contact"
-        class="hover:text-secondary transition"
+      <NuxtLink to="/contact" class="hover:text-secondary transition"
         >Contact</NuxtLink
       >
       <button
@@ -121,6 +103,6 @@ import { ref } from "vue";
 const isOpen = ref(false);
 
 const goToLogin = () => {
-  navigateTo("/auth/login");
+  navigateTo("/programs");
 };
 </script>

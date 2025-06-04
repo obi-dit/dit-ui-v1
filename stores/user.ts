@@ -5,13 +5,16 @@ import type { UserProfileType } from "~/types/logged";
 
 export const useUser = defineStore("user", () => {
   const token = useStorage<string | null>("token", null);
-  const profileObject = ref<UserProfileType>();
+  const profileObject = ref<UserProfileType | undefined>();
 
   const setToken = (value: string) => {
     token.value = value;
   };
 
-  const logout = () => {};
+  const logout = () => {
+    token.value = null;
+    profileObject.value = undefined;
+  };
 
   const isLogged = computed(() => {
     return !!token.value;
@@ -19,7 +22,7 @@ export const useUser = defineStore("user", () => {
 
   const setUserRegistrationDataPoint = async (
     tokenValue: string,
-    user: UserProfileType,
+    user: UserProfileType
   ) => {
     console.log({ tokenValue, user });
     if (tokenValue) {

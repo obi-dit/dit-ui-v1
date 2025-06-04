@@ -15,8 +15,11 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@pinia/nuxt",
+    "@vueuse/nuxt",
   ],
+
   ssr: false,
+  spaLoadingTemplate: "public/loader.html",
   css: ["assets/css/main.css"],
   pinia: {
     storesDirs: ["./stores/**", "./custom-folder/stores/**"],

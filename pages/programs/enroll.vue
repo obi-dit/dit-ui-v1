@@ -7,38 +7,26 @@
         Enroll Now
       </h1>
 
-      <form
+      <UForm
+        :schema="schema"
+        :state="form"
         class="space-y-6"
-        @submit.prevent="handleSubmit"
+        @submit="handleSubmit"
       >
         <!-- Name -->
-        <div>
-          <label class="block mb-2 text-sm font-medium text-gray-700"
-            >Full Name</label
-          >
-          <input
-            v-model="form.name"
-            type="text"
-            required
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
+
+        <UFormField label="Full Name" name="name">
+          <UInput v-model="form.name" placeholder="Enter your full name" />
+        </UFormField>
 
         <!-- Email -->
-        <div>
-          <label class="block mb-2 text-sm font-medium text-gray-700"
-            >Email Address</label
-          >
-          <input
-            v-model="form.email"
-            type="email"
-            required
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
+
+        <UFormField label="Email Address" name="email">
+          <UInput v-model="form.email" placeholder="Enter your Email address" />
+        </UFormField>
 
         <!-- Program Selection -->
-        <div>
+        <!-- <div>
           <label class="block mb-2 text-sm font-medium text-gray-700"
             >Select Program</label
           >
@@ -47,55 +35,38 @@
             required
             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-primary"
           >
-            <option
-              value=""
-              disabled
-            >
-              Select a program
-            </option>
-            <option
-              value="AI Essentials"
-              class="text-primary"
-            >
+            <option value="" disabled>Select a program</option>
+            <option value="AI Essentials" class="text-primary">
               🤖 AI Essentials Program ($250 Installment / $8,500 Total)
             </option>
-            <option
-              value="IT Fundamentals"
-              class="text-primary"
-            >
+            <option value="IT Fundamentals" class="text-primary">
               🧠 IT Fundamentals Program ($250 Installment / $6,500 Total)
             </option>
-            <option
-              value="Helpdesk Support"
-              class="text-primary"
-            >
+            <option value="Helpdesk Support" class="text-primary">
               🧰 Helpdesk Support Program ($250 Installment / $6,500 Total)
             </option>
           </select>
-        </div>
+        </div> -->
 
+        <UFormField label="Select Program" name="program">
+          <USelect v-model="form.program" :items="allPrograms" class="w-48" />
+        </UFormField>
         <!-- Message -->
-        <div>
-          <label class="block mb-2 text-sm font-medium text-gray-700"
-            >Message (Optional)</label
-          >
-          <textarea
-            v-model="form.message"
-            rows="4"
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
+        <UFormField label="Message (Optional)" name="message">
+          <UTextarea v-model="form.message" />
+        </UFormField>
 
         <!-- Submit Button -->
         <div class="text-center">
-          <button
+          <UButton
+            :loading="isSubmitting"
             type="submit"
-            class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition"
+            class="bg-primary cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition"
           >
             Submit Enrollment
-          </button>
+          </UButton>
         </div>
-      </form>
+      </UForm>
     </div>
     <Footer />
   </div>
@@ -103,7 +74,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+import * as v from "valibot";
+import type { ProgramsType } from "~/types/general";
 const form = ref({
   name: "",
   email: "",
@@ -111,16 +83,55 @@ const form = ref({
   message: "",
 });
 
-function handleSubmit() {
-  console.log("Enrollment submitted:", form.value);
-  alert("Thank you for enrolling! We will contact you soon.");
-  form.value = {
-    name: "",
-    email: "",
-    program: "",
-    message: "",
-  };
-}
+const schema = v.object({
+  name: v.pipe(v.string(), v.minLength(3, "Estate Name must be at least 3")),
+  email: v.pipe(v.string(), v.email()),
+  program: v.pipe(v.string(), v.minLength(3, "Program must not be empty")),
+  message: v.pipe(v.string(), v.maxLength(1000)),
+});
+
+type Schema = v.InferOutput<typeof schema>;
+
+const allPrograms = asyncComputed(async () => {
+  try {
+    const response = await useRequest("programs");
+    const responseJson = response._data as ProgramsType[];
+    if (response.status === 200) {
+      return responseJson.map((program) => ({
+        value: program.id,
+        label: program.title,
+      }));
+    }
+  } catch (error) {
+    useHandlingGlobalErrorMessages(error, "getting programs", "default");
+  }
+});
+const isSubmitting = ref(false);
+const handleSubmit = async () => {
+  isSubmitting.value = true;
+  try {
+    const response = await useRequest("enrollment", {
+      method: "POST",
+      body: {
+        name: form.value.name,
+        email: form.value.email,
+        programId: form.value.program,
+        message: form.value.message,
+      },
+    });
+
+    const successfulResponseCode = [200, 201, 204];
+    if (successfulResponseCode.includes(response.status)) {
+      const responseJson = response._data as { url: string };
+      window.open(responseJson.url);
+      isSubmitting.value = false;
+    }
+    isSubmitting.value = false;
+  } catch (error) {
+    isSubmitting.value = false;
+    useHandlingGlobalErrorMessages(error, "enrolling", "default");
+  }
+};
 </script>
 
 <style scoped>

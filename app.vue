@@ -20,6 +20,8 @@ watchEffect(() => {
     navigateTo("/dashboard");
   }
 });
+
+// user.logout();
 watch(
   isLogged,
   (value) => {
@@ -29,7 +31,7 @@ watch(
     }
   },
   {
-    immediate: true,
+    immediate: false,
   }
 );
 </script>
