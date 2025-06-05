@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
+  devServer: {
+    host: "0.0.0.0",
+  },
   modules: [
     "@nuxt/ui",
     "@nuxt/eslint",
