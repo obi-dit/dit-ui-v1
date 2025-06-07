@@ -17,32 +17,16 @@
         <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
         <ul class="space-y-2">
           <li>
-            <NuxtLink
-              to="/"
-              class="hover:underline"
-              >Home</NuxtLink
-            >
+            <NuxtLink to="/" class="hover:underline">Home</NuxtLink>
           </li>
           <li>
-            <NuxtLink
-              to="/about"
-              class="hover:underline"
-              >About</NuxtLink
-            >
+            <NuxtLink to="/about" class="hover:underline">About</NuxtLink>
           </li>
           <li>
-            <NuxtLink
-              to="/programs"
-              class="hover:underline"
-              >Programs</NuxtLink
-            >
+            <NuxtLink to="/programs" class="hover:underline">Programs</NuxtLink>
           </li>
           <li>
-            <NuxtLink
-              to="/contact"
-              class="hover:underline"
-              >Contact</NuxtLink
-            >
+            <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
           </li>
         </ul>
       </div>
@@ -53,9 +37,7 @@
         <p>306 South 7th Street<br />Suite 209B, Tacoma, WA 98402</p>
         <p class="mt-2">
           Email:
-          <a
-            href="mailto:info@diversityintechnology.org"
-            class="underline"
+          <a href="mailto:info@diversityintechnology.org" class="underline"
             >info@diversityintechnology.org</a
           >
         </p>
@@ -66,28 +48,24 @@
         <h4 class="font-semibold text-lg mb-3">Connect with Us</h4>
         <div class="flex space-x-4 mt-2">
           <a
-            href="#"
+            href="https://www.facebook.com/share/1Ashciedb7/?mibextid=wwXIfr"
             aria-label="Facebook"
             class="hover:text-secondary"
           >
             <i class="fab fa-facebook-f" />
           </a>
           <a
-            href="#"
+            href="https://x.com/ditech2020"
             aria-label="Twitter"
             class="hover:text-secondary"
           >
             <i class="fab fa-twitter" />
           </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            class="hover:text-secondary"
-          >
+          <!-- <a href="#" aria-label="LinkedIn" class="hover:text-secondary">
             <i class="fab fa-linkedin-in" />
-          </a>
+          </a> -->
           <a
-            href="#"
+            href="https://www.instagram.com/diversityintechnology2020?igsh=cWVqeGpyd2c4Yjhh&utm_source=qr"
             aria-label="Instagram"
             class="hover:text-secondary"
           >

@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import aiEssentials from "@/assets/webp/ai-essentials.webp";
+import aiEssentials from "@/assets/pngs/ai-image.png";
 import itFundamentals from "@/assets/webp/it-fundamentals.webp";
 import helpdeskSupport from "@/assets/webp/helpdesk-support.webp";
 

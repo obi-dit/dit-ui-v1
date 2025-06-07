@@ -9,10 +9,7 @@
         :key="index"
         class="flex flex-col items-center"
       >
-        <NuxtIcon
-          :name="item.icon"
-          class="text-accent-blue text-5xl mb-4"
-        />
+        <NuxtIcon :name="item.icon" class="text-accent-blue text-5xl mb-4" />
         <p class="text-4xl font-bold text-primary">{{ item.current }}</p>
         <p class="text-lg text-gray-600">{{ item.label }}</p>
       </div>
@@ -25,8 +22,8 @@ import { ref, onMounted } from "vue";
 
 const counters = ref([
   {
-    label: "Active Students",
-    value: 32,
+    label: "Enrollment Wait List",
+    value: 50,
     current: 0,
     icon: "users", // Make sure this icon exists in your icon set
   },
