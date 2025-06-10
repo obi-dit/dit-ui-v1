@@ -61,9 +61,13 @@
           >
             <i class="fab fa-twitter" />
           </a>
-          <!-- <a href="#" aria-label="LinkedIn" class="hover:text-secondary">
+          <a
+            href="https://www.linkedin.com/company/diversity-in-technology-vocational-school-wa"
+            aria-label="LinkedIn"
+            class="hover:text-secondary"
+          >
             <i class="fab fa-linkedin-in" />
-          </a> -->
+          </a>
           <a
             href="https://www.instagram.com/diversityintechnology2020?igsh=cWVqeGpyd2c4Yjhh&utm_source=qr"
             aria-label="Instagram"

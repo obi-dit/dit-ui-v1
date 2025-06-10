@@ -14,7 +14,7 @@
         >. You can now start learning right away.
       </p>
       <NuxtLink
-        to="/index"
+        to="/"
         class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition"
       >
         Go to Home

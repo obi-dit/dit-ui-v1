@@ -9,12 +9,14 @@
         class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg mb-6"
       >
         <iframe
-          class="w-full h-full"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="DIT Showcase Video"
+          src="https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=0df19b8c-fe78-473c-8987-ef52bba2e4b4&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+          width="640"
+          height="360"
           frameborder="0"
+          scrolling="no"
           allowfullscreen
-        />
+          title="DIT TECH WELCOME VIDEO.mp4"
+        ></iframe>
       </div>
 
       <p class="text-light-blue max-w-3xl mx-auto text-lg">
