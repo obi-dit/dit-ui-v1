@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
 
-  ssr: false,
+  // ssr: false,
   spaLoadingTemplate: "public/loader.html",
   css: ["assets/css/main.css"],
   pinia: {
