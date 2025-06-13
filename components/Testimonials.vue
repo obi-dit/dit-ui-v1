@@ -59,6 +59,13 @@
 <script setup lang="ts">
 const testimonials = [
   {
+    name: "Jaquile Baird",
+    age: "16",
+    quote:
+      "He completed the Helpdesk Support program 90 days ago and got a 74K Helpdesk Job offer. He currently works there now.",
+    image: null,
+  },
+  {
     name: "Amara",
     age: 15,
     quote: "DIT helped me discover my passion for AI!",

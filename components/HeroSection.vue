@@ -54,6 +54,7 @@
       <div class="md:w-1/2">
         <img
           src="~assets/pngs/superhero.png"
+          loading="lazy"
           alt="Diversity in Tech"
           class="w-full h-[500px] object-cover object-top rounded-lg shadow-lg"
         />

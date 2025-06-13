@@ -48,6 +48,8 @@ const programs = [
     installmentFee: 250,
     totalCost: "$8,500",
     image: aiEssentials,
+    videoUrl:
+      "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=8332ac57-389f-4352-a807-08432257c9ba&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },
   {
     icon: "🧠",
@@ -56,6 +58,8 @@ const programs = [
     installmentFee: 250,
     totalCost: "$6,500",
     image: itFundamentals,
+    videoUrl:
+      "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=8c155b1c-0033-46ad-81d4-953eb6587f7b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },
   {
     icon: "🧰",
@@ -64,6 +68,8 @@ const programs = [
     installmentFee: 250,
     totalCost: "$6,500",
     image: helpdeskSupport,
+    videoUrl:
+      "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=72e16b7e-efa8-4076-9dae-db3af34d6253&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },
 ];
 </script>

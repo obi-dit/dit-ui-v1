@@ -36,6 +36,84 @@ export default defineNuxtConfig({
     ],
   },
 
+  app: {
+    baseURL: process.env.NUXT_PUBLIC_PATH || "/", // Directory project is installed in
+    // buildAssetsDir, // Folder to host built packages in .nuxt relative to baseURL
+    // cdnURL, // Host url
+    pageTransition: {
+      name: "nuxt-page-fade",
+      mode: "out-in",
+    },
+    layoutTransition: {
+      name: "nuxt-layout-fade",
+      mode: "out-in",
+    },
+    head: {
+      title: "DIT | Empowering Future Technologists in AI, IT & Digital Media",
+      htmlAttrs: {
+        lang: "en",
+      },
+      link: [
+        {
+          rel: "stylesheet",
+          href: "/css/main.css",
+        },
+
+        {
+          rel: "shortcut icon",
+          href: "/dit_favicon.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          href: "/dit_favicon.png",
+        },
+
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+        },
+      ],
+
+      meta: [
+        { charset: "utf-8" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scaleWorkskuad=1",
+        },
+        {
+          name: "description",
+          content: "DIT",
+        },
+        { hid: "og-type", property: "og:type", content: "website" },
+        {
+          hid: "og-title",
+          property: "og:title",
+          content:
+            "DIT | Empowering Future Technologists in AI, IT & Digital Media",
+        },
+
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: (process.env.NUXT_PUBLIC_PATH || "/") + `dit_favicon.png`,
+        },
+        {
+          hid: "t-type",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+      ],
+    },
+  },
+
   runtimeConfig: {
     public: {
       inStaging: Boolean(process.env.NUXT_IN_STAGING) || false,

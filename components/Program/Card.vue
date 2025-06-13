@@ -1,11 +1,30 @@
 <template>
   <div class="bg-white rounded-xl shadow-md p-6">
-    <img
-      :src="image"
-      alt="Program Image"
-      class="w-full object-cover rounded-lg mb-4"
-    />
+    <div class="mb-4 rounded-lg overflow-hidden aspect-video relative">
+      <!-- Image always shown, blurred if iframe is loading -->
+      <img
+        :src="image"
+        alt="Program preview"
+        :class="[
+          'absolute top-0 left-0 w-full h-full object-cover transition-all duration-500',
+          videoUrl ? (iframeLoaded ? 'blur-0' : 'blur-sm') : '',
+        ]"
+      />
 
+      <!-- Iframe on top, becomes visible after loading -->
+      <iframe
+        v-if="videoUrl"
+        :src="videoUrl"
+        class="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-500"
+        :class="{ 'opacity-100': iframeLoaded }"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        @load="onIframeLoad"
+      ></iframe>
+    </div>
+
+    <!-- Program Details -->
     <h3 class="text-xl font-semibold text-primary mb-1">{{ title }}</h3>
     <p class="text-sm text-gray-600 mb-2">Total Cost: {{ totalCost }}</p>
 
@@ -24,12 +43,19 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   title: String,
   image: String,
   installmentFee: Number,
   totalCost: String,
+  videoUrl: String,
 });
+
+const iframeLoaded = ref(false);
+
+const onIframeLoad = () => {
+  iframeLoaded.value = true;
+};
 
 const gotoToEnrollPage = () => {
   navigateTo("/programs/enroll");
