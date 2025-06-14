@@ -1,7 +1,8 @@
 <template>
   <div class="bg-white rounded-xl shadow-md p-6">
+    <!-- Media Preview (Image + Video Blur Transition) -->
     <div class="mb-4 rounded-lg overflow-hidden aspect-video relative">
-      <!-- Image always shown, blurred if iframe is loading -->
+      <!-- Fallback Image -->
       <img
         :src="image"
         alt="Program preview"
@@ -11,7 +12,7 @@
         ]"
       />
 
-      <!-- Iframe on top, becomes visible after loading -->
+      <!-- Video Iframe -->
       <iframe
         v-if="videoUrl"
         :src="videoUrl"
@@ -24,15 +25,26 @@
       ></iframe>
     </div>
 
-    <!-- Program Details -->
+    <!-- Program Text Info -->
     <h3 class="text-xl font-semibold text-primary mb-1">{{ title }}</h3>
     <p class="text-sm text-gray-600 mb-2">Total Cost: {{ totalCost }}</p>
 
-    <p class="text-base text-secondary font-bold mb-4">
+    <p class="text-base text-secondary font-bold mb-2">
       ${{ installmentFee }}
       <span class="text-sm text-gray-500 font-normal">/ installment</span>
     </p>
 
+    <!-- Caption -->
+    <p v-if="caption" class="text-gray-700 text-sm italic mb-2">
+      “{{ caption }}”
+    </p>
+
+    <!-- Summary -->
+    <p v-if="summary" class="text-gray-600 text-sm mb-4">
+      {{ summary }}
+    </p>
+
+    <!-- CTA -->
     <button
       class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md w-full"
       @click.prevent="gotoToEnrollPage"
@@ -49,6 +61,8 @@ const props = defineProps({
   installmentFee: Number,
   totalCost: String,
   videoUrl: String,
+  summary: String,
+  caption: String,
 });
 
 const iframeLoaded = ref(false);

@@ -48,6 +48,10 @@ const programs = [
     installmentFee: 250,
     totalCost: "$8,500",
     image: aiEssentials,
+    caption:
+      "Explore how students use AI tools to create, innovate, and solve real-world problems.",
+    summary:
+      "The AI Essentials Program introduces students to artificial intelligence through hands-on projects like music generation, content creation, and chatbot design. It’s tailored for learners ages 14–17 and builds foundational skills in prompt engineering, data literacy, and responsible AI use. Students leave with both creative portfolios and essential digital credentials.",
     videoUrl:
       "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=8332ac57-389f-4352-a807-08432257c9ba&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },
@@ -58,6 +62,10 @@ const programs = [
     installmentFee: 250,
     totalCost: "$6,500",
     image: itFundamentals,
+    caption:
+      "Step inside our beginner-friendly course that builds real hardware and networking skills.",
+    summary:
+      "Our IT Fundamentals Program offers an interactive introduction to computer hardware, operating systems, and basic networking concepts. Students build and troubleshoot real machines, gaining confidence through project-based learning. Ideal for ages 14–17, this course provides a strong entry point for further IT training or certifications.",
     videoUrl:
       "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=8c155b1c-0033-46ad-81d4-953eb6587f7b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },
@@ -68,6 +76,10 @@ const programs = [
     installmentFee: 250,
     totalCost: "$6,500",
     image: helpdeskSupport,
+    caption:
+      "Get a behind-the-scenes look at how students prepare for IT support roles.",
+    summary:
+      "The Helpdesk Support Program trains students (18+) for Tier 1 IT roles using real-life ticketing scenarios and troubleshooting tools. Learners develop communication, diagnostic, and remote support skills necessary for entry-level tech jobs. Graduates are prepared to interview for MSP positions or pursue CompTIA certifications.",
     videoUrl:
       "https://diversityintechnology-my.sharepoint.com/personal/darylreynolds_diversityintechnology_org/_layouts/15/embed.aspx?UniqueId=72e16b7e-efa8-4076-9dae-db3af34d6253&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
   },

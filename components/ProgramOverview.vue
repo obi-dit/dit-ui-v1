@@ -35,24 +35,24 @@
 <script setup lang="ts">
 const programs = [
   {
-    title: "AI Basics",
-    ageRange: "12–15",
+    title: "AI Essentials Program",
+    ageRange: "18–24",
     description:
       "Learn how machines think and make decisions using AI fundamentals.",
-    link: "/programs/ai-basics",
+    link: "/programs",
   },
   {
-    title: "Digital Storytelling",
-    ageRange: "13–17",
-    description:
-      "Combine technology and creativity to tell powerful digital stories.",
-    link: "/programs/digital-storytelling",
-  },
-  {
-    title: "Web Development",
-    ageRange: "14–17",
+    title: "IT Fundamentals Program",
+    ageRange: "18–24",
     description: "Build websites from scratch using HTML, CSS, and JavaScript.",
-    link: "/programs/web-development",
+    link: "/programs",
+  },
+  {
+    title: "Helpdesk Support Program",
+    ageRange: "18–24",
+    description:
+      "Get a behind-the-scenes look at how students prepare for IT support roles.",
+    link: "/programs",
   },
 ];
 </script>
