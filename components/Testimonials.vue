@@ -60,32 +60,32 @@
 const testimonials = [
   {
     name: "Jaquile Baird",
-    age: "16",
+    age: "18",
     quote:
       "He completed the Helpdesk Support program 90 days ago and got a 74K Helpdesk Job offer. He currently works there now.",
     image: null,
   },
   {
     name: "Amara",
-    age: 15,
+    age: 19,
     quote: "DIT helped me discover my passion for AI!",
     image: null,
   },
   {
     name: "Jayden",
-    age: 14,
+    age: 20,
     quote: "I built my first website thanks to my mentor!",
     image: null,
   },
   {
     name: "Fatima",
-    age: 16,
+    age: 18,
     quote: "I love how DIT makes tech fun and easy to learn.",
     image: null,
   },
   {
     name: "Michael",
-    age: 17,
+    age: 21,
     quote: "The projects at DIT helped me build real-world skills.",
     image: null,
   },

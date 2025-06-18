@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-xl shadow-md p-6">
-    <!-- Media Preview (Image + Video Blur Transition) -->
+    <!-- Media Preview -->
     <div class="mb-4 rounded-lg overflow-hidden aspect-video relative">
       <!-- Fallback Image -->
       <img
@@ -8,21 +8,21 @@
         alt="Program preview"
         :class="[
           'absolute top-0 left-0 w-full h-full object-cover transition-all duration-500',
-          videoUrl ? (iframeLoaded ? 'blur-0' : 'blur-sm') : '',
+          videoUrl ? (videoLoaded ? 'blur-0' : 'blur-sm') : '',
         ]"
       />
 
-      <!-- Video Iframe -->
-      <iframe
+      <!-- Native Video -->
+      <video
         v-if="videoUrl"
         :src="videoUrl"
-        class="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-500"
-        :class="{ 'opacity-100': iframeLoaded }"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        @load="onIframeLoad"
-      ></iframe>
+        class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+        :class="{ 'opacity-100': videoLoaded }"
+        @loadeddata="onVideoLoad"
+        controls
+        muted
+        playsinline
+      ></video>
     </div>
 
     <!-- Program Text Info -->
@@ -40,9 +40,7 @@
     </p>
 
     <!-- Summary -->
-    <p v-if="summary" class="text-gray-600 text-sm mb-4">
-      {{ summary }}
-    </p>
+    <p v-if="summary" class="text-gray-600 text-sm mb-4">{{ summary }}</p>
 
     <!-- CTA -->
     <button
@@ -65,10 +63,10 @@ const props = defineProps({
   caption: String,
 });
 
-const iframeLoaded = ref(false);
+const videoLoaded = ref(false);
 
-const onIframeLoad = () => {
-  iframeLoaded.value = true;
+const onVideoLoad = () => {
+  videoLoaded.value = true;
 };
 
 const gotoToEnrollPage = () => {
