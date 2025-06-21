@@ -3,6 +3,7 @@
 export default defineNuxtConfig({
   ssr: true,
   nitro: {
+    compressPublicAssets: true,
     prerender: {
       routes: ["/", "/about", "/contact"],
     },
