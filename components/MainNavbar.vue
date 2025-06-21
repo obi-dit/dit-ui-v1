@@ -48,7 +48,7 @@
       <ul class="hidden md:flex space-x-8 text-sm font-medium">
         <li>
           <NuxtLink to="/programs" class="hover:text-secondary transition"
-            >Programs</NuxtLink
+            >Student Portal</NuxtLink
           >
         </li>
         <li>
@@ -80,7 +80,7 @@
       class="md:hidden flex flex-col gap-4 mt-4 px-6 pb-4 bg-primary"
     >
       <NuxtLink to="/programs" class="hover:text-secondary transition"
-        >Programs</NuxtLink
+        >Student Portal</NuxtLink
       >
       <NuxtLink to="/about" class="hover:text-secondary transition"
         >About</NuxtLink

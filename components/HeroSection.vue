@@ -14,12 +14,12 @@
         <div
           class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
         >
-          <button
+          <!-- <button
             @click.prevent="goToProgram"
             class="bg-accent-blue hover:bg-secondary text-white py-2 px-6 rounded cursor-pointer"
           >
             Join a Program
-          </button>
+          </button> -->
           <UModal
             title="Watch our introductory video"
             description="Diversityintechnology aims in providing excellent mentorship and tech trainings"
@@ -28,7 +28,7 @@
             }"
           >
             <UButton
-              label="Watch Welcome"
+              label="Click to Get Started"
               color="neutral"
               variant="subtle"
               class="border border-light-blue text-white py-2 px-6 rounded hover:bg-[#85b4ff] hover:text-[#001244] cursor-pointer bg-transparent"
