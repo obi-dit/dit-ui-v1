@@ -1,11 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  routeRules: {
-    "/": {
-      ssr: false,
+  ssr: true,
+  nitro: {
+    prerender: {
+      routes: ["/", "/about", "/contact"],
     },
   },
+  // routeRules: {
+  //   "/": {
+  //     ssr: false,
+  //   },
+  // },
   devtools: { enabled: true },
   imports: {
     autoImport: true,
@@ -14,14 +20,14 @@ export default defineNuxtConfig({
     host: "0.0.0.0",
   },
   modules: [
+    ...(process.env.NODE_ENV === "development"
+      ? ["@nuxt/test-utils", "@nuxt/eslint"]
+      : []),
     "@nuxt/ui",
-    "@nuxt/eslint",
-    // '@nuxt/content',
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/scripts",
-    "@nuxt/test-utils",
     "@pinia/nuxt",
     "@vueuse/nuxt",
   ],
@@ -59,11 +65,6 @@ export default defineNuxtConfig({
         lang: "en",
       },
       link: [
-        {
-          rel: "stylesheet",
-          href: "/css/main.css",
-        },
-
         {
           rel: "shortcut icon",
           href: "/dit_favicon.png",
