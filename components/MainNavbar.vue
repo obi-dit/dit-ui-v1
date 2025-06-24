@@ -47,7 +47,9 @@
       <!-- Navigation Links (Desktop) -->
       <ul class="hidden md:flex space-x-8 text-sm font-medium">
         <li>
-          <NuxtLink to="/programs" class="hover:text-secondary transition"
+          <NuxtLink
+            to="https://moodle.org/login/index.php"
+            class="hover:text-secondary transition"
             >Student Portal</NuxtLink
           >
         </li>
