@@ -48,7 +48,7 @@
       <ul class="hidden md:flex space-x-8 text-sm font-medium">
         <li>
           <NuxtLink
-            to="https://moodle.org/login/index.php"
+            to="https://diversityintechnology.moodlecloud.com/login/index.php"
             class="hover:text-secondary transition"
             >Student Portal</NuxtLink
           >
