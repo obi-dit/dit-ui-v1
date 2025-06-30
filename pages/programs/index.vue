@@ -47,9 +47,6 @@ import itFundamentals from "@/assets/webp/it-fundamentals.webp";
 import helpdeskSupport from "@/assets/webp/helpdesk-support.webp";
 
 // Correct imports for video files (Vite/Nuxt3 friendly)
-import aiVideo from "@/assets/video/aiv.mp4";
-import itVideo from "@/assets/video/it-fundamental.mp4";
-import helpdeskVideo from "@/assets/video/hsd.mp4";
 
 const programs = [
   {
@@ -63,7 +60,8 @@ const programs = [
       "Explore how students use AI tools to create, innovate, and solve real-world problems.",
     summary:
       "The AI Essentials Program introduces students to artificial intelligence through hands-on projects like music generation, content creation, and chatbot design. It’s tailored for learners ages 14–17 and builds foundational skills in prompt engineering, data literacy, and responsible AI use. Students leave with both creative portfolios and essential digital credentials.",
-    videoUrl: aiVideo,
+    videoUrl:
+      "https://player.cloudinary.com/embed/?cloud_name=dy4yhk3im&public_id=aiv_ffuodl&profile=cld-default",
   },
   {
     icon: "🧠",
@@ -76,7 +74,8 @@ const programs = [
       "Step inside our beginner-friendly course that builds real hardware and networking skills.",
     summary:
       "Our IT Fundamentals Program offers an interactive introduction to computer hardware, operating systems, and basic networking concepts. Students build and troubleshoot real machines, gaining confidence through project-based learning. Ideal for ages 14–17, this course provides a strong entry point for further IT training or certifications.",
-    videoUrl: itVideo,
+    videoUrl:
+      "https://player.cloudinary.com/embed/?cloud_name=dy4yhk3im&public_id=it-fundamental_yozdhz&profile=cld-default",
   },
   {
     icon: "🧰",
@@ -89,7 +88,8 @@ const programs = [
       "Get a behind-the-scenes look at how students prepare for IT support roles.",
     summary:
       "The Helpdesk Support Program trains students (18+) for Tier 1 IT roles using real-life ticketing scenarios and troubleshooting tools. Learners develop communication, diagnostic, and remote support skills necessary for entry-level tech jobs. Graduates are prepared to interview for MSP positions or pursue CompTIA certifications.",
-    videoUrl: helpdeskVideo,
+    videoUrl:
+      "https://player.cloudinary.com/embed/?cloud_name=dy4yhk3im&public_id=hsd_fzi1nz&profile=cld-default",
   },
 ];
 </script>

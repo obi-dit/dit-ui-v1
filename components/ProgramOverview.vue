@@ -42,16 +42,17 @@ const programs = [
     link: "/programs",
   },
   {
-    title: "IT Fundamentals Program",
+    title: "Google IT Fundamentals",
     ageRange: "18–24",
-    description: "Build websites from scratch using HTML, CSS, and JavaScript.",
+    description:
+      "An IT Support program, trains individuals to provide technical assistance to users of computer systems and software.",
     link: "/programs",
   },
   {
-    title: "Helpdesk Support Program",
+    title: "Help desk Support ",
     ageRange: "18–24",
     description:
-      "Get a behind-the-scenes look at how students prepare for IT support roles.",
+      "IT Fundamentals provides an introduction to the core concepts and skills needed to work in the information technology field.",
     link: "/programs",
   },
 ];

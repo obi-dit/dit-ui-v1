@@ -73,7 +73,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import * as v from "valibot";
 import type { ProgramsType } from "~/types/general";
 const form = ref({

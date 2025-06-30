@@ -15,10 +15,7 @@
         class="space-y-6 bg-gray-50 p-8 rounded-xl shadow relative"
         @submit.prevent="handleSubmit"
       >
-        <transition
-          name="fade"
-          mode="out-in"
-        >
+        <transition name="fade" mode="out-in">
           <div
             v-if="success"
             key="success"
@@ -60,10 +57,7 @@
           >
             Email
           </label>
-          <p
-            v-if="!validEmail"
-            class="text-red-500 text-sm mt-1"
-          >
+          <p v-if="!validEmail" class="text-red-500 text-sm mt-1">
             Please enter a valid email.
           </p>
         </div>
@@ -130,8 +124,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-
 const form = ref({
   name: "",
   email: "",
@@ -141,7 +133,7 @@ const form = ref({
 const success = ref(false);
 
 const validEmail = computed(() =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email),
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email)
 );
 
 function handleSubmit() {

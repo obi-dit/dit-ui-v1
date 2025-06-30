@@ -8,15 +8,15 @@
       <div
         class="aspect-video rounded-xl overflow-hidden shadow-lg mb-6 relative"
       >
-        <video
-          :src="videoUrl"
-          class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
-          :class="{ 'opacity-100': videoLoaded, 'opacity-0': !videoLoaded }"
-          controls
-          muted
-          playsinline
-          @canplay="onVideoLoad"
-        ></video>
+        <iframe
+          src="https://player.cloudinary.com/embed/?cloud_name=dy4yhk3im&public_id=MicrosoftTeams-video_cxqckk&profile=cld-default"
+          width="640"
+          height="360"
+          style="height: auto; width: 100%; aspect-ratio: 640 / 360"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowfullscreen
+          frameborder="0"
+        ></iframe>
       </div>
 
       <p class="text-light-blue max-w-3xl mx-auto text-lg">
@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import videoUrl from "@/assets/video/dit_welcome_video.mp4";
+import videoUrl from "@/assets/video/hero.mp4";
 
 const videoLoaded = ref(false);
 

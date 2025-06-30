@@ -20,34 +20,19 @@
         class="space-y-4"
         @submit="onSubmit"
       >
-        <UFormField
-          label="First Name"
-          name="firstName"
-        >
+        <UFormField label="First Name" name="firstName">
           <UInput v-model="state.firstName" />
         </UFormField>
-        <UFormField
-          label="Last Name"
-          name="lastName"
-        >
+        <UFormField label="Last Name" name="lastName">
           <UInput v-model="state.lastName" />
         </UFormField>
 
-        <UFormField
-          label="Email"
-          name="email"
-        >
+        <UFormField label="Email" name="email">
           <UInput v-model="state.email" />
         </UFormField>
 
-        <UFormField
-          label="Password"
-          name="password"
-        >
-          <UInput
-            v-model="state.password"
-            type="password"
-          />
+        <UFormField label="Password" name="password">
+          <UInput v-model="state.password" type="password" />
         </UFormField>
 
         <UButton
@@ -62,8 +47,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useUser } from "@/stores/user";
 import type { RegistrationResponse, UserProfileType } from "@/types/logged";
 
 import * as v from "valibot";
@@ -72,7 +55,7 @@ import type { FormSubmitEvent } from "@nuxt/ui";
 const schema = v.object({
   firstName: v.pipe(
     v.string(),
-    v.minLength(3, "First Name must be at least 3"),
+    v.minLength(3, "First Name must be at least 3")
   ),
   lastName: v.pipe(v.string(), v.minLength(3, "Last Name must be at least 3")),
   email: v.pipe(v.string(), v.email("Invalid email")),
@@ -111,7 +94,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
     await user.setUserRegistrationDataPoint(
       responseData.accessToken,
-      responseData.user,
+      responseData.user
     );
 
     if (!user.isVerifiedUser) {

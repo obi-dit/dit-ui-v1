@@ -3,26 +3,36 @@
     <!-- Media Preview -->
     <div class="mb-4 rounded-lg overflow-hidden aspect-video relative">
       <!-- Fallback Image -->
-      <img
+      <!-- <img
         :src="image"
         alt="Program preview"
         :class="[
           'absolute top-0 left-0 w-full h-full object-cover transition-all duration-500',
           videoUrl ? (videoLoaded ? 'blur-0' : 'blur-sm') : '',
         ]"
-      />
+      /> -->
 
       <!-- Native Video -->
-      <video
-        v-if="videoUrl"
-        :src="videoUrl"
+      <!-- <video
         class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
-        :class="{ 'opacity-100': videoLoaded }"
         @loadeddata="onVideoLoad"
         controls
         muted
         playsinline
-      ></video>
+      >
+        <source :src="videoUrl" type="video/mp4" />
+
+        Your browser does not support the video tag.
+      </video> -->
+      <iframe
+        :src="videoUrl"
+        width="640"
+        height="360"
+        style="height: auto; width: 100%; aspect-ratio: 640 / 360"
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
     </div>
 
     <!-- Program Text Info -->
@@ -64,7 +74,7 @@ const props = defineProps({
 });
 
 const videoLoaded = ref(false);
-
+console.log("log", props.videoUrl);
 const onVideoLoad = () => {
   videoLoaded.value = true;
 };
