@@ -97,6 +97,15 @@
         </div>
 
         <div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Phone</h3>
+          <p class="text-white">
+            <a href="tel:(253)254-5701" class="text-white hover:underline">
+              (253)254-5701
+            </a>
+          </p>
+        </div>
+
+        <div>
           <h3 class="text-xl font-semibold mb-2 text-white">Email</h3>
           <p>
             <a

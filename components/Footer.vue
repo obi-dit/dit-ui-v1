@@ -41,6 +41,10 @@
             >info@diversityintechnology.org</a
           >
         </p>
+        <p class="mt-2">
+          Phone:
+          <a href="tel:(253)254-5701" class="underline">(253)254-5701</a>
+        </p>
       </div>
 
       <!-- Social Media -->
