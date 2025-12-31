@@ -21,6 +21,8 @@ export default defineNuxtRouteMiddleware((to) => {
   const unloggedRoutes = [
     "index",
     "contact",
+    "organization-chart",
+    "student-support-team",
     "about",
     "programs-enroll",
     "programs",

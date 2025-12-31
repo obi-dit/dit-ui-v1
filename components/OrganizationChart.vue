@@ -18,7 +18,10 @@
           </div>
 
           <!-- Children Container -->
-          <div v-if="rootNode.children && rootNode.children.length > 0" class="org-children">
+          <div
+            v-if="rootNode.children && rootNode.children.length > 0"
+            class="org-children"
+          >
             <div
               v-for="(child, index) in rootNode.children"
               :key="index"
@@ -31,7 +34,10 @@
               <div class="org-node">
                 <div class="org-card">
                   <div class="org-avatar">
-                    <Icon name="mdi:account-circle" class="text-3xl text-white" />
+                    <Icon
+                      name="mdi:account-circle"
+                      class="text-3xl text-white"
+                    />
                   </div>
                   <div class="org-info">
                     <h3 class="org-name">{{ child.name }}</h3>
@@ -53,7 +59,10 @@
                     <div class="org-node">
                       <div class="org-card">
                         <div class="org-avatar">
-                          <Icon name="mdi:account-circle" class="text-2xl text-white" />
+                          <Icon
+                            name="mdi:account-circle"
+                            class="text-2xl text-white"
+                          />
                         </div>
                         <div class="org-info">
                           <h3 class="org-name">{{ grandchild.name }}</h3>
@@ -161,7 +170,11 @@ const rootNode = computed(() => props.data);
 }
 
 .org-card {
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-600),
+    var(--color-primary-700)
+  );
   border: 2px solid var(--color-primary-400);
   border-radius: 12px;
   padding: 1.5rem;
@@ -314,4 +327,3 @@ const rootNode = computed(() => props.data);
   }
 }
 </style>
-

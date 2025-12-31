@@ -59,6 +59,20 @@
           >
         </li>
         <li>
+          <NuxtLink
+            to="/student-support-team"
+            class="hover:text-secondary transition"
+            >Support Team</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink
+            to="/organization-chart"
+            class="hover:text-secondary transition"
+            >Organization</NuxtLink
+          >
+        </li>
+        <li>
           <NuxtLink to="/contact" class="hover:text-secondary transition"
             >Contact</NuxtLink
           >
@@ -86,6 +100,14 @@
       >
       <NuxtLink to="/about" class="hover:text-secondary transition"
         >About</NuxtLink
+      >
+      <NuxtLink
+        to="/student-support-team"
+        class="hover:text-secondary transition"
+        >Support Team</NuxtLink
+      >
+      <NuxtLink to="/organization-chart" class="hover:text-secondary transition"
+        >Organization</NuxtLink
       >
       <NuxtLink to="/contact" class="hover:text-secondary transition"
         >Contact</NuxtLink

@@ -5,7 +5,13 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     prerender: {
-      routes: ["/", "/about", "/contact"],
+      routes: [
+        "/",
+        "/about",
+        "/contact",
+        "/organization-chart",
+        "/student-support-team",
+      ],
     },
   },
   // routeRules: {
