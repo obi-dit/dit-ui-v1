@@ -9,7 +9,15 @@
 
       <div class="grid">
         <div class="card">
-          <div class="avatar">DR</div>
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Daryl Reynolds')"
+              :src="getAvatarImage('Daryl Reynolds')"
+              alt="Daryl Reynolds"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Daryl Reynolds", "DR") }}</span>
+          </div>
           <div class="name">Daryl Reynolds</div>
           <div class="title">School Director / CEO</div>
           <div class="bio">
@@ -17,14 +25,20 @@
             open real technology career doors for you.
           </div>
           <div class="links">
-            <a href="mailto:darylreynolds@diversityintechnology.onmicrosoft.com"
-              >Email Daryl</a
-            >
+            <a href="mailto:daryl@diversityintechnology.org">Email Daryl</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="avatar">VA</div>
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Vanessa')"
+              :src="getAvatarImage('Vanessa')"
+              alt="Vanessa"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
+          </div>
           <div class="name">Vanessa</div>
           <div class="title">Academic Director</div>
           <div class="bio">
@@ -32,59 +46,120 @@
             your learning experience high-quality and engaging.
           </div>
           <div class="links">
-            <a href="#">Contact Academic Team</a>
+            <a href="mailto:vanessamartinez@diversityintechnology.org"
+              >Email Vanessa</a
+            >
           </div>
         </div>
 
         <div class="card">
-          <div class="avatar">VE</div>
-          <div class="name">Venu</div>
-          <div class="title">Student Services Coordinator</div>
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Abdul')"
+              :src="getAvatarImage('Abdul')"
+              alt="Abdul-Ganiw"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Abdul-Ganiw", "AG") }}</span>
+          </div>
+          <div class="name">Abdul-Ganiw</div>
+          <div class="title">Senior Technology Trainer</div>
           <div class="bio">
-            Venu is your main contact for questions about enrollment,
-            attendance, paperwork, or getting extra support.
+            Abdul-Ganiw leads the student technology trainers who help you in
+            labs, practice helpdesk skills, and complete projects.
           </div>
           <div class="links">
-            <a href="#">Email Student Services</a>
+            <a href="mailto:abdul@diversityintechnology.org">Email Abdul</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="avatar">OB</div>
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Marie')"
+              :src="getAvatarImage('Marie')"
+              alt="Marie"
+              class="avatar-img"
+            />
+          </div>
+          <div class="name">Marie</div>
+          <div class="title">Senior Technology Trainer</div>
+          <div class="bio">
+            Marie is the senior technology trainer for the DIT school. She is
+            responsible for the development of the DIT school's software
+            applications.
+          </div>
+          <div class="links">
+            <a href="mailto:marie@diversityintechnology.org">Email Marie</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Venu')"
+              :src="getAvatarImage('Venu')"
+              alt="Venu"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Diana Rose", "DR") }}</span>
+          </div>
+          <div class="name">Diana Rose</div>
+          <div class="title">AI Executive Coordinator</div>
+          <div class="bio">
+            Diana is the AI executive coordinator for the DIT school. She is
+            responsible for the coordination of the AI program.
+          </div>
+          <div class="links">
+            <a href="mailto:dianarose@diversityintechnology.org"
+              >Email Diana Rose</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Babatunde')"
+              :src="getAvatarImage('Babatunde')"
+              alt="Babatunde"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Babatunde", "BO") }}</span>
+          </div>
+          <div class="name">Babatunde Ogedenghe</div>
+          <div class="title">Senior System Administrator</div>
+          <div class="bio">
+            Babatunde is the senior system administrator for the DIT school. He
+            is responsible for the management of the DIT school's systems and
+            infrastructure.
+          </div>
+          <div class="links">
+            <a href="mailto:babatunde@diversityintechnology.org"
+              >Email Babatunde</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="avatar">
+            <img
+              v-if="getAvatarImage('Obi')"
+              :src="getAvatarImage('Obi')"
+              alt="Obi"
+              class="avatar-img"
+            />
+            <span v-else>{{ getInitials("Obi", "OB") }}</span>
+          </div>
           <div class="name">Obi</div>
-          <div class="title">Student Tech Trainer Lead</div>
+          <div class="title">Lead Software Engineer</div>
           <div class="bio">
-            Obi leads the student technology trainers who help you in labs,
-            practice helpdesk skills, and complete projects.
+            Obi is the lead software engineer for the DIT school. He is
+            responsible for the development of the DIT school's software
+            applications.
           </div>
           <div class="links">
-            <a href="#">Ask for Tech Help</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">ST</div>
-          <div class="name">Student Tech Trainers</div>
-          <div class="title">Peer Technology Support</div>
-          <div class="bio">
-            This student team helps you with basic tech questions, ticketing
-            practice, and building confidence in real IT workflows.
-          </div>
-          <div class="links">
-            <a href="#">Learn about the program</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">IT</div>
-          <div class="name">IT Support Team</div>
-          <div class="title">Systems &amp; Platforms</div>
-          <div class="bio">
-            The IT team helps when you can't log in, when systems go down, or
-            when lab environments need troubleshooting.
-          </div>
-          <div class="links">
-            <a href="#">Submit a Support Request</a>
+            <a href="mailto:obi@diversityintechnology.org">Contact Obi</a>
           </div>
         </div>
       </div>
@@ -95,9 +170,48 @@
 </template>
 
 <script setup lang="ts">
+import abdulImage from "@/assets/pngs/Abdul-Ganiw.png";
+import vanessaImage from "@/assets/pngs/Vanessa.png";
+import obiImage from "@/assets/pngs/Obi.png";
+import marieImage from "@/assets/pngs/Marie.png";
+import babatundeImage from "@/assets/pngs/Babatunde.png";
 useHead({
   title: "Meet Your DIT Support Team",
 });
+
+// Map team members to their avatar images
+const avatarImages: Record<string, string> = {
+  Abdul: abdulImage,
+  Vanessa: vanessaImage,
+  Obi: obiImage,
+  Marie: marieImage,
+  Babatunde: babatundeImage,
+  // Add more team members' images here as they become available
+  // "Daryl Reynolds": darylImage,
+  // "Vanessa": vanessaImage,
+  // "Venu": venuImage,
+  // "Obi": obiImage,
+  // etc.
+};
+
+const getAvatarImage = (name: string): string | undefined => {
+  return avatarImages[name];
+};
+
+const getInitials = (name: string, fallback: string): string => {
+  if (name === "TBD" || name.includes("Team")) {
+    return fallback;
+  }
+  const parts = name.split(" ").filter((p) => p.length > 0);
+  if (parts.length >= 2) {
+    const first = parts[0]?.[0];
+    const last = parts[parts.length - 1]?.[0];
+    if (first && last) {
+      return (first + last).toUpperCase();
+    }
+  }
+  return name.substring(0, 2).toUpperCase();
+};
 </script>
 
 <style lang="scss" scoped>
@@ -158,6 +272,15 @@ h1 {
   font-size: 22px;
   font-weight: bold;
   color: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .name {

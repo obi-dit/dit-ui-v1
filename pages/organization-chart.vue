@@ -17,7 +17,15 @@
         </div>
         <div class="grid">
           <div class="card alt">
-            <div class="avatar">DR</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Daryl Reynolds')"
+                :src="getAvatarImage('Daryl Reynolds')"
+                :alt="'Daryl Reynolds'"
+                class="avatar-img"
+              />
+              <span v-else>{{ getInitials("Daryl Reynolds", "DR") }}</span>
+            </div>
             <div class="name">Daryl Reynolds</div>
             <div class="title">School Director / CEO</div>
             <div class="bio">
@@ -46,36 +54,20 @@
         </div>
         <div class="grid">
           <div class="card">
-            <div class="avatar">VA</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Vanessa')"
+                :src="getAvatarImage('Vanessa')"
+                alt="Vanessa"
+                class="avatar-img"
+              />
+              <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
+            </div>
             <div class="name">Vanessa</div>
             <div class="title">Academic Director</div>
             <div class="bio">
               Oversees curriculum, instructors, and teaching quality to ensure
               students gain industry-ready IT and AI skills.
-            </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-          <div class="card">
-            <div class="avatar">AI</div>
-            <div class="name">TBD</div>
-            <div class="title">AI Program Lead</div>
-            <div class="bio">
-              Leads AI Essentials curriculum, classroom delivery, and
-              integration of AI tools into student capstone projects.
-            </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-          <div class="card">
-            <div class="avatar">IN</div>
-            <div class="name">TBD</div>
-            <div class="title">Lead Instructor / Mentor</div>
-            <div class="bio">
-              Provides day-to-day instruction, hands-on labs, and mentoring
-              support across DIT's vocational programs.
             </div>
             <!-- <div class="links">
               <a href="#">Email</a> · <a href="#">LinkedIn</a>
@@ -97,7 +89,15 @@
         <div class="grid">
           <div class="card alt">
             <div class="dotted">Dotted-line to: Academic Director</div>
-            <div class="avatar">AB</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Abdul')"
+                :src="getAvatarImage('Abdul')"
+                alt="Abdul"
+                class="avatar-img"
+              />
+              <span v-else>AB</span>
+            </div>
             <div class="name">Abdul</div>
             <div class="title">Director, Research &amp; Development</div>
             <div class="bio">
@@ -110,81 +110,50 @@
           </div>
 
           <div class="card">
-            <div class="dotted">Collaborates with: R&amp;D Director</div>
-            <div class="avatar">OB</div>
-            <div class="name">Obi</div>
-            <div class="title">Student Tech Trainer Lead</div>
-            <div class="bio">
-              Manages student technology trainers and coordinates labs, peer
-              tutoring, virtual helpdesk simulations, and project support.
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('AI Executive Coordinator')"
+                :src="getAvatarImage('AI Executive Coordinator')"
+                alt="AI Executive Coordinator"
+                class="avatar-img"
+              />
+              <span v-else>ST</span>
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
+            <div class="name">Diana Mondero</div>
+            <div class="title">AI Executive Coordinator</div>
+            <div class="bio">
+              Oversees AI program logistics, student support, and operational
+              coordination to ensure smooth execution of AI training
+              initiatives.
+            </div>
 
-          <div class="card">
-            <div class="avatar">ST</div>
-            <div class="name">Student Team</div>
-            <div class="title">Student Technology Trainers</div>
-            <div class="bio">
-              Provide hands-on support in labs, assist with classroom
-              technology, and help peers practice real-world IT support
-              workflows.
-            </div>
             <!-- <div class="links">
               <a href="#">Program Overview</a>
             </div> -->
           </div>
 
           <div class="card">
-            <div class="avatar">EV</div>
-            <div class="name">Student Team</div>
-            <div class="title">Lab Assist / Virtual Helpdesk</div>
-            <div class="bio">
-              Support virtual helpdesk practice, ticket triage, and simulated
-              workplace scenarios used in DIT training cohorts.
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Marie')"
+                :src="getAvatarImage('Marie')"
+                alt="Technology Training Supervisor"
+                class="avatar-img"
+              />
+              <span v-else>ST</span>
             </div>
-            <!-- <div class="links">
-              <a href="#">Program Overview</a>
-            </div> -->
+            <div class="name">Marie Ysulat</div>
+            <div class="title">Technology Training Supervisor</div>
+            <div class="bio">
+              Supervises student technology trainers, manages lab schedules, and
+              ensures training equipment is in good working order to support
+              student learning.
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Student Services -->
-      <section class="dept">
-        <div class="dept-header">
-          <div class="dept-title">Student Services</div>
-          <div class="dept-note">Onboarding, support, and retention.</div>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <div class="avatar">VE</div>
-            <div class="name">Venu</div>
-            <div class="title">Student Services Coordinator</div>
-            <div class="bio">
-              Supports students with onboarding, enrollment documentation, case
-              management, and connection to wrap-around services.
-            </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-          <div class="card">
-            <div class="avatar">SS</div>
-            <div class="name">TBD</div>
-            <div class="title">Student Success Coach</div>
-            <div class="bio">
-              Helps students set goals, stay on track with coursework, and
-              remove barriers that impact completion and placement.
-            </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-        </div>
-      </section>
 
       <!-- Technology & IT Support -->
       <section class="dept">
@@ -196,36 +165,50 @@
         </div>
         <div class="grid">
           <div class="card">
-            <div class="avatar">IT</div>
-            <div class="name">TBD</div>
-            <div class="title">IT &amp; Systems Support Lead</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Babatunde')"
+                :src="getAvatarImage('Babatunde')"
+                alt="Babatunde"
+                class="avatar-img"
+              />
+              <span v-else>BO</span>
+            </div>
+            <div class="name">Babatunde Ogedenghe</div>
+            <div class="title">Senior System Administrator</div>
             <div class="bio">
               Maintains core technology platforms, networking, and virtual lab
               access used across all DIT training programs.
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
           </div>
+        </div>
+      </section>
+
+      <!-- Tech and Engineering -->
+      <section class="dept">
+        <div class="dept-header">
+          <div class="dept-title">Tech and Engineering</div>
+          <div class="dept-note">
+            Software development, engineering, and technical architecture.
+          </div>
+        </div>
+        <div class="grid">
           <div class="card">
-            <div class="avatar">LM</div>
-            <div class="name">TBD</div>
-            <div class="title">LMS / Helpdesk Platforms</div>
-            <div class="bio">
-              Administers the learning management system and helpdesk tools
-              students use to log tickets and practice IT workflows.
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Obi')"
+                :src="getAvatarImage('Obi')"
+                alt="Obi"
+                class="avatar-img"
+              />
+              <span v-else>{{ getInitials("Obi Uche", "OU") }}</span>
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-          <div class="card">
-            <div class="avatar">TS</div>
-            <div class="name">TBD</div>
-            <div class="title">Technical Support</div>
+            <div class="name">Obi Uche</div>
+            <div class="title">Lead Software Engineer</div>
             <div class="bio">
-              Provides direct technical assistance to students, instructors, and
-              staff during live cohorts and lab sessions.
+              Leads software development initiatives, technical architecture,
+              and engineering best practices across DIT's technology platforms
+              and systems.
             </div>
             <!-- <div class="links">
               <a href="#">Email</a> · <a href="#">LinkedIn</a>
@@ -235,72 +218,92 @@
       </section>
 
       <!-- Marketing & Outreach -->
-      <section class="dept">
+      <!-- <section class="dept">
         <div class="dept-header">
           <div class="dept-title">Marketing &amp; Community Outreach</div>
           <div class="dept-note">Brand, content, and partner engagement.</div>
         </div>
         <div class="grid">
           <div class="card">
-            <div class="avatar">MK</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Marketing Director')"
+                :src="getAvatarImage('Marketing Director')"
+                alt="Marketing Director"
+                class="avatar-img"
+              />
+              <span v-else>MK</span>
+            </div>
             <div class="name">TBD</div>
             <div class="title">Marketing Director</div>
             <div class="bio">
               Oversees DIT's brand voice, campaigns, and messaging to students,
               partners, and the broader community.
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
           </div>
           <div class="card">
-            <div class="avatar">DM</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Digital Media Lead')"
+                :src="getAvatarImage('Digital Media Lead')"
+                alt="Digital Media Lead"
+                class="avatar-img"
+              />
+              <span v-else>DM</span>
+            </div>
             <div class="name">TBD</div>
             <div class="title">Digital Media Lead</div>
             <div class="bio">
               Manages content production for DIT Digital Studios, social
               channels, and program marketing initiatives.
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
           </div>
           <div class="card">
-            <div class="avatar">CM</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Community Manager')"
+                :src="getAvatarImage('Community Manager')"
+                alt="Community Manager"
+                class="avatar-img"
+              />
+              <span v-else>CM</span>
+            </div>
             <div class="name">TBD</div>
             <div class="title">Community Manager</div>
             <div class="bio">
               Builds relationships with Urban League partners, schools, and
               community organizations to support student recruitment.
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Finance & Compliance -->
-      <section class="dept">
+      <!-- <section class="dept">
         <div class="dept-header">
           <div class="dept-title">Finance &amp; Compliance</div>
           <div class="dept-note">Fiscal stewardship and audit readiness.</div>
         </div>
         <div class="grid">
           <div class="card">
-            <div class="avatar">FN</div>
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Finance Compliance Coordinator')"
+                :src="getAvatarImage('Finance Compliance Coordinator')"
+                alt="Finance Compliance Coordinator"
+                class="avatar-img"
+              />
+              <span v-else>FN</span>
+            </div>
             <div class="name">TBD</div>
             <div class="title">Finance &amp; Compliance Coordinator</div>
             <div class="bio">
               Ensures accurate financial reporting, grant documentation, and
               alignment with workforce and education compliance requirements.
             </div>
-            <!-- <div class="links">
-              <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
           </div>
         </div>
-      </section>
+      </section> -->
 
       <div class="legend">
         Dotted-line notes indicate cross-department collaboration in addition to
@@ -313,9 +316,47 @@
 </template>
 
 <script setup lang="ts">
+import abdulImage from "@/assets/pngs/Abdul-Ganiw.png";
+import marieImage from "@/assets/pngs/Marie.png";
+import vanessaImage from "@/assets/pngs/Vanessa.png";
+import babatundeImage from "@/assets/pngs/Babatunde.png";
+import obiImage from "@/assets/pngs/Obi.png";
+
 useHead({
   title: "DIT Org Chart - Leadership & Departments",
 });
+
+// Map team members to their avatar images
+const avatarImages: Record<string, string> = {
+  Abdul: abdulImage,
+  Marie: marieImage,
+  Vanessa: vanessaImage,
+  Babatunde: babatundeImage,
+  Obi: obiImage,
+  // Add more team members' images here as they become available
+  // "Daryl Reynolds": darylImage,
+  // "Vanessa": vanessaImage,
+  // etc.
+};
+
+const getAvatarImage = (name: string): string | undefined => {
+  return avatarImages[name];
+};
+
+const getInitials = (name: string, fallback: string): string => {
+  if (name === "TBD" || name.includes("Team")) {
+    return fallback;
+  }
+  const parts = name.split(" ").filter((p) => p.length > 0);
+  if (parts.length >= 2) {
+    const first = parts[0]?.[0];
+    const last = parts[parts.length - 1]?.[0];
+    if (first && last) {
+      return (first + last).toUpperCase();
+    }
+  }
+  return name.substring(0, 2).toUpperCase();
+};
 </script>
 
 <style lang="scss" scoped>
@@ -412,6 +453,15 @@ h1 {
   font-size: 22px;
   font-weight: bold;
   color: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .name {
