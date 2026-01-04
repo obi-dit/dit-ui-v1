@@ -278,10 +278,10 @@
         </div>
       </section> -->
 
-      <div class="legend">
+      <!-- <div class="legend">
         Dotted-line notes indicate cross-department collaboration in addition to
         formal reporting lines.
-      </div>
+      </div> -->
     </div>
 
     <Footer />
