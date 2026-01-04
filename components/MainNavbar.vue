@@ -62,7 +62,7 @@
           <NuxtLink
             to="/student-support-team"
             class="hover:text-secondary transition"
-            >Support Team</NuxtLink
+            >Research & Development Team</NuxtLink
           >
         </li>
         <li>
