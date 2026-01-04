@@ -23,7 +23,7 @@
               <span v-else>{{ getInitials("Daryl Reynolds", "DR") }}</span>
             </div>
             <div class="name">Daryl Reynolds</div>
-            <div class="title">School Director / CEO</div>
+            <div class="title">School Director / CEO, CIO and COB</div>
             <div class="bio">
               Founder and executive leader guiding strategy, partnerships,
               growth, and student impact across all DIT programs.
@@ -60,7 +60,7 @@
               <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
             </div>
             <div class="name">Vanessa</div>
-            <div class="title">Technology Training, Content Creation, R&D</div>
+            <div class="title">Vocational School Director and R&D</div>
             <div class="bio">
               Oversees curriculum, instructors, and teaching quality to ensure
               students gain industry-ready IT and AI skills.
@@ -95,7 +95,7 @@
               <span v-else>AB</span>
             </div>
             <div class="name">Abdul</div>
-            <div class="title">Technology Training  Supervisor</div>
+            <div class="title">Technology Training Supervisor and R&D</div>
             <div class="bio">
               Leads AI innovation, workforce research, and development of new
               student-driven technology training models and pilots.
@@ -117,7 +117,7 @@
             </div>
             <div class="name">Marie Ysulat</div>
             <div class="title">
-              Technology Training, Content Creation and R&D
+              Technology Training Supervisor, Content Creation and R&D
             </div>
             <div class="bio">
               Supervises student technology trainers, manages lab schedules, and
@@ -148,7 +148,7 @@
               <span v-else>BO</span>
             </div>
             <div class="name">Babatunde Ogedengbe</div>
-            <div class="title">Lead Systems and Network Engineer</div>
+            <div class="title">Lead Systems and Network Engineer and R&D</div>
             <div class="bio">
               Maintains core technology platforms, networking, and virtual lab
               access used across all DIT training programs.
@@ -177,7 +177,9 @@
               <span v-else>{{ getInitials("Obi Uche", "OU") }}</span>
             </div>
             <div class="name">Obi Uche</div>
-            <div class="title">Lead  Software and Web Developer Engineer</div>
+            <div class="title">
+              Lead  Software and Web Developer Engineer and R&D
+            </div>
             <div class="bio">
               Leads software development initiatives, technical architecture,
               and engineering best practices across DIT's technology platforms

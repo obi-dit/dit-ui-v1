@@ -2,10 +2,6 @@
   <section class="text-primary pages entry student-support-team-page">
     <div class="support-team-container">
       <h1>Meet Your DIT Student Technologist</h1>
-      <div class="subtitle">
-        These are the people you and your family will interact with the most
-        during your training journey.
-      </div>
 
       <div class="grid">
         <div class="card">
