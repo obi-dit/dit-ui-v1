@@ -67,9 +67,9 @@
       <StatsCounter />
 
       <!-- Organization Chart -->
-      <div class="mt-20">
+      <!-- <div class="mt-20">
         <OrganizationChart />
-      </div>
+      </div> -->
 
       <!-- Call to Action -->
       <div class="text-center mt-16">

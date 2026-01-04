@@ -1,7 +1,7 @@
 <template>
   <section class="text-primary pages entry student-support-team-page">
     <div class="support-team-container">
-      <h1>Meet Your DIT Support Team</h1>
+      <h1>Meet Your DIT Student Technologist</h1>
       <div class="subtitle">
         These are the people you and your family will interact with the most
         during your training journey.
@@ -10,157 +10,44 @@
       <div class="grid">
         <div class="card">
           <div class="avatar">
-            <img
-              v-if="getAvatarImage('Daryl Reynolds')"
-              :src="getAvatarImage('Daryl Reynolds')"
-              alt="Daryl Reynolds"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Daryl Reynolds", "DR") }}</span>
+            <span>{{ getInitials("Open Position", "OP") }}</span>
           </div>
-          <div class="name">Daryl Reynolds</div>
-          <div class="title">School Director / CEO</div>
+          <div class="name">Open Position</div>
+          <div class="title">R&D Student Technologist-intern</div>
           <div class="bio">
-            Daryl leads the school and makes sure DIT programs are designed to
-            open real technology career doors for you.
+            Join our Research & Development team as a Student
+            Technologist-intern. Help drive innovation and support cutting-edge
+            technology training initiatives.
           </div>
-          <div class="links">
-            <a href="mailto:daryl@diversityintechnology.org">Email Daryl</a>
-          </div>
+          <div class="open-slots">33 Open Slots</div>
         </div>
 
         <div class="card">
           <div class="avatar">
-            <img
-              v-if="getAvatarImage('Vanessa')"
-              :src="getAvatarImage('Vanessa')"
-              alt="Vanessa"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
+            <span>{{ getInitials("Open Position", "OP") }}</span>
           </div>
-          <div class="name">Vanessa</div>
-          <div class="title">Academic Director</div>
+          <div class="name">Open Position</div>
+          <div class="title">R&D Student Research Technologist</div>
           <div class="bio">
-            Vanessa oversees your classes, instructors, and curriculum to keep
-            your learning experience high-quality and engaging.
+            Join our Research & Development team as a Student Research
+            Technologist. Contribute to research projects and technology
+            development.
           </div>
-          <div class="links">
-            <a href="mailto:vanessamartinez@diversityintechnology.org"
-              >Email Vanessa</a
-            >
-          </div>
+          <div class="open-slots">33 Open Slots</div>
         </div>
 
         <div class="card">
           <div class="avatar">
-            <img
-              v-if="getAvatarImage('Abdul')"
-              :src="getAvatarImage('Abdul')"
-              alt="Abdul-Ganiw"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Abdul-Ganiw", "AG") }}</span>
+            <span>{{ getInitials("Open Position", "OP") }}</span>
           </div>
-          <div class="name">Abdul-Ganiw</div>
-          <div class="title">Senior Technology Trainer</div>
+          <div class="name">Open Position</div>
+          <div class="title">Sr. Student Research Technologist</div>
           <div class="bio">
-            Abdul-Ganiw leads the student technology trainers who help you in
-            labs, practice helpdesk skills, and complete projects.
+            Join our Research & Development team as a Senior Student Research
+            Technologist. Lead research initiatives and mentor junior team
+            members.
           </div>
-          <div class="links">
-            <a href="mailto:abdul@diversityintechnology.org">Email Abdul</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">
-            <img
-              v-if="getAvatarImage('Marie')"
-              :src="getAvatarImage('Marie')"
-              alt="Marie"
-              class="avatar-img"
-            />
-          </div>
-          <div class="name">Marie</div>
-          <div class="title">Senior Technology Trainer</div>
-          <div class="bio">
-            Marie is the senior technology trainer for the DIT school. She is
-            responsible for the development of the DIT school's software
-            applications.
-          </div>
-          <div class="links">
-            <a href="mailto:marie@diversityintechnology.org">Email Marie</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">
-            <img
-              v-if="getAvatarImage('Venu')"
-              :src="getAvatarImage('Venu')"
-              alt="Venu"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Diana Rose", "DR") }}</span>
-          </div>
-          <div class="name">Diana Rose</div>
-          <div class="title">AI Executive Coordinator</div>
-          <div class="bio">
-            Diana is the AI executive coordinator for the DIT school. She is
-            responsible for the coordination of the AI program.
-          </div>
-          <div class="links">
-            <a href="mailto:dianarose@diversityintechnology.org"
-              >Email Diana Rose</a
-            >
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">
-            <img
-              v-if="getAvatarImage('Babatunde')"
-              :src="getAvatarImage('Babatunde')"
-              alt="Babatunde"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Babatunde", "BO") }}</span>
-          </div>
-          <div class="name">Babatunde Ogedenghe</div>
-          <div class="title">Senior System Administrator</div>
-          <div class="bio">
-            Babatunde is the senior system administrator for the DIT school. He
-            is responsible for the management of the DIT school's systems and
-            infrastructure.
-          </div>
-          <div class="links">
-            <a href="mailto:babatunde@diversityintechnology.org"
-              >Email Babatunde</a
-            >
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar">
-            <img
-              v-if="getAvatarImage('Obi')"
-              :src="getAvatarImage('Obi')"
-              alt="Obi"
-              class="avatar-img"
-            />
-            <span v-else>{{ getInitials("Obi", "OB") }}</span>
-          </div>
-          <div class="name">Obi</div>
-          <div class="title">Lead Software Engineer</div>
-          <div class="bio">
-            Obi is the lead software engineer for the DIT school. He is
-            responsible for the development of the DIT school's software
-            applications.
-          </div>
-          <div class="links">
-            <a href="mailto:obi@diversityintechnology.org">Contact Obi</a>
-          </div>
+          <div class="open-slots">33 Open Slots</div>
         </div>
       </div>
     </div>
@@ -175,6 +62,7 @@ import vanessaImage from "@/assets/pngs/Vanessa.png";
 import obiImage from "@/assets/pngs/Obi.png";
 import marieImage from "@/assets/pngs/Marie.png";
 import babatundeImage from "@/assets/pngs/Babatunde.png";
+import dayrl from "@/assets/pngs/Daryl.png";
 useHead({
   title: "Meet Your DIT Support Team",
 });
@@ -186,6 +74,7 @@ const avatarImages: Record<string, string> = {
   Obi: obiImage,
   Marie: marieImage,
   Babatunde: babatundeImage,
+  Daryl: dayrl,
   // Add more team members' images here as they become available
   // "Daryl Reynolds": darylImage,
   // "Vanessa": vanessaImage,
@@ -314,6 +203,13 @@ h1 {
       text-decoration: underline;
     }
   }
+}
+
+.open-slots {
+  font-size: 12px;
+  color: #ffee8a;
+  font-weight: 600;
+  margin-top: 8px;
 }
 
 // Responsive adjustments

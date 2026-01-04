@@ -2,10 +2,6 @@
   <section class="text-primary pages entry organization-chart-page">
     <div class="org-chart-container">
       <h1>DIT Organizational Leadership</h1>
-      <div class="subtitle">
-        Blue cards show formal reporting lines. Text in the top-right of a card
-        indicates dotted-line collaboration.
-      </div>
 
       <!-- Executive Leadership -->
       <section class="dept">
@@ -19,8 +15,8 @@
           <div class="card alt">
             <div class="avatar">
               <img
-                v-if="getAvatarImage('Daryl Reynolds')"
-                :src="getAvatarImage('Daryl Reynolds')"
+                v-if="getAvatarImage('Daryl')"
+                :src="getAvatarImage('Daryl')"
                 :alt="'Daryl Reynolds'"
                 class="avatar-img"
               />
@@ -64,7 +60,7 @@
               <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
             </div>
             <div class="name">Vanessa</div>
-            <div class="title">Academic Director</div>
+            <div class="title">Technology Training, Content Creation, R&D</div>
             <div class="bio">
               Oversees curriculum, instructors, and teaching quality to ensure
               students gain industry-ready IT and AI skills.
@@ -99,36 +95,13 @@
               <span v-else>AB</span>
             </div>
             <div class="name">Abdul</div>
-            <div class="title">Director, Research &amp; Development</div>
+            <div class="title">Technology Training  Supervisor</div>
             <div class="bio">
               Leads AI innovation, workforce research, and development of new
               student-driven technology training models and pilots.
             </div>
             <!-- <div class="links">
               <a href="#">Email</a> · <a href="#">LinkedIn</a>
-            </div> -->
-          </div>
-
-          <div class="card">
-            <div class="avatar">
-              <img
-                v-if="getAvatarImage('AI Executive Coordinator')"
-                :src="getAvatarImage('AI Executive Coordinator')"
-                alt="AI Executive Coordinator"
-                class="avatar-img"
-              />
-              <span v-else>ST</span>
-            </div>
-            <div class="name">Diana Mondero</div>
-            <div class="title">AI Executive Coordinator</div>
-            <div class="bio">
-              Oversees AI program logistics, student support, and operational
-              coordination to ensure smooth execution of AI training
-              initiatives.
-            </div>
-
-            <!-- <div class="links">
-              <a href="#">Program Overview</a>
             </div> -->
           </div>
 
@@ -143,7 +116,9 @@
               <span v-else>ST</span>
             </div>
             <div class="name">Marie Ysulat</div>
-            <div class="title">Technology Training Supervisor</div>
+            <div class="title">
+              Technology Training, Content Creation and R&D
+            </div>
             <div class="bio">
               Supervises student technology trainers, manages lab schedules, and
               ensures training equipment is in good working order to support
@@ -159,9 +134,7 @@
       <section class="dept">
         <div class="dept-header">
           <div class="dept-title">Technology &amp; IT Support</div>
-          <div class="dept-note">
-            Systems, platforms, and lab infrastructure.
-          </div>
+          <div class="dept-note">Systems, platforms, and Networking.</div>
         </div>
         <div class="grid">
           <div class="card">
@@ -174,8 +147,8 @@
               />
               <span v-else>BO</span>
             </div>
-            <div class="name">Babatunde Ogedenghe</div>
-            <div class="title">Senior System Administrator</div>
+            <div class="name">Babatunde Ogedengbe</div>
+            <div class="title">Lead Systems and Network Engineer</div>
             <div class="bio">
               Maintains core technology platforms, networking, and virtual lab
               access used across all DIT training programs.
@@ -204,7 +177,7 @@
               <span v-else>{{ getInitials("Obi Uche", "OU") }}</span>
             </div>
             <div class="name">Obi Uche</div>
-            <div class="title">Lead Software Engineer</div>
+            <div class="title">Lead  Software and Web Developer Engineer</div>
             <div class="bio">
               Leads software development initiatives, technical architecture,
               and engineering best practices across DIT's technology platforms
@@ -321,6 +294,7 @@ import marieImage from "@/assets/pngs/Marie.png";
 import vanessaImage from "@/assets/pngs/Vanessa.png";
 import babatundeImage from "@/assets/pngs/Babatunde.png";
 import obiImage from "@/assets/pngs/Obi.png";
+import daryl from "@/assets/pngs/Daryl.png";
 
 useHead({
   title: "DIT Org Chart - Leadership & Departments",
@@ -333,6 +307,7 @@ const avatarImages: Record<string, string> = {
   Vanessa: vanessaImage,
   Babatunde: babatundeImage,
   Obi: obiImage,
+  Daryl: daryl,
   // Add more team members' images here as they become available
   // "Daryl Reynolds": darylImage,
   // "Vanessa": vanessaImage,
