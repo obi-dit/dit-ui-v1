@@ -66,7 +66,7 @@
             <i class="fab fa-twitter" />
           </a>
           <a
-            href="https://www.linkedin.com/company/diversity-in-technology-vocational-school-wa"
+            href="https://www.linkedin.com/company/dittech"
             aria-label="LinkedIn"
             class="hover:text-secondary"
           >

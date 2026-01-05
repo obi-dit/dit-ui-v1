@@ -125,6 +125,30 @@
               student learning.
             </div>
           </div>
+
+          <div class="card">
+            <div class="avatar">
+              <span>{{ getInitials("Vacant", "VA") }}</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">Human Resources</div>
+            <div class="bio">
+              Manages recruitment, employee relations, benefits administration,
+              and organizational development to support DIT's growing team.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="avatar">
+              <span>{{ getInitials("Vacant", "VA") }}</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">Student Admissions</div>
+            <div class="bio">
+              Oversees student enrollment processes, application reviews, and
+              coordinates with partners to ensure smooth admissions workflows.
+            </div>
+          </div>
         </div>
       </section>
 
