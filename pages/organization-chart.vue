@@ -125,34 +125,8 @@
               student learning.
             </div>
           </div>
-
-          <div class="card">
-            <div class="avatar">
-              <span>{{ getInitials("Vacant", "VA") }}</span>
-            </div>
-            <div class="name">Vacant</div>
-            <div class="title">Human Resources</div>
-            <div class="bio">
-              Manages recruitment, employee relations, benefits administration,
-              and organizational development to support DIT's growing team.
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="avatar">
-              <span>{{ getInitials("Vacant", "VA") }}</span>
-            </div>
-            <div class="name">Vacant</div>
-            <div class="title">Student Admissions</div>
-            <div class="bio">
-              Oversees student enrollment processes, application reviews, and
-              coordinates with partners to ensure smooth admissions workflows.
-            </div>
-          </div>
         </div>
       </section>
-
-      <!-- Student Services -->
 
       <!-- Technology & IT Support -->
       <section class="dept">
@@ -216,6 +190,116 @@
         </div>
       </section>
 
+      <!-- Finance & Compliance -->
+      <section class="dept">
+        <div class="dept-header">
+          <div class="dept-title">Finance &amp; Compliance</div>
+          <div class="dept-note">Fiscal stewardship and audit readiness.</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Finance Compliance Coordinator')"
+                :src="getAvatarImage('Finance Compliance Coordinator')"
+                alt="Finance Compliance Coordinator"
+                class="avatar-img"
+              />
+              <span v-else>FN</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">Finance &amp; Compliance Coordinator</div>
+            <div class="bio">
+              Ensures accurate financial reporting, grant documentation, and
+              alignment with workforce and education compliance requirements.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Services -->
+      <section class="dept">
+        <div class="dept-header">
+          <div class="dept-title">Human Resources</div>
+          <div class="dept-note">
+            Recruitment, employee relations, and benefits administration.
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Human Resources Coordinator')"
+                :src="getAvatarImage('Human Resources Coordinator')"
+                alt="Human Resources Coordinator"
+                class="avatar-img"
+              />
+              <span v-else>FN</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">Human Resources</div>
+            <div class="bio">
+              Manages recruitment, employee relations, benefits administration,
+              and organizational development to support DIT's growing team.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Services -->
+      <section class="dept">
+        <div class="dept-header">
+          <div class="dept-title">Student Services</div>
+          <div class="dept-note">Student support and engagement.</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('Finance Compliance Coordinator')"
+                :src="getAvatarImage('Finance Compliance Coordinator')"
+                alt="Student Services Coordinator"
+                class="avatar-img"
+              />
+              <span v-else>FN</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">Student Admissions</div>
+            <div class="bio">
+              Oversees student enrollment processes, application reviews, and
+              coordinates with partners to ensure smooth admissions workflows.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- General Counsel -->
+      <section class="dept">
+        <div class="dept-header">
+          <div class="dept-title">General Counsel</div>
+          <div class="dept-note">Legal advice and compliance.</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="avatar">
+              <img
+                v-if="getAvatarImage('General Counsel')"
+                :src="getAvatarImage('General Counsel')"
+                alt="General Counsel"
+                class="avatar-img"
+              />
+              <span v-else>GC</span>
+            </div>
+            <div class="name">Vacant</div>
+            <div class="title">General Counsel</div>
+            <div class="bio">
+              Provides legal advice and compliance for DIT's operations and
+              programs.
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Marketing & Outreach -->
       <!-- <section class="dept">
         <div class="dept-header">
@@ -272,33 +356,6 @@
             <div class="bio">
               Builds relationships with Urban League partners, schools, and
               community organizations to support student recruitment.
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Finance & Compliance -->
-      <!-- <section class="dept">
-        <div class="dept-header">
-          <div class="dept-title">Finance &amp; Compliance</div>
-          <div class="dept-note">Fiscal stewardship and audit readiness.</div>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <div class="avatar">
-              <img
-                v-if="getAvatarImage('Finance Compliance Coordinator')"
-                :src="getAvatarImage('Finance Compliance Coordinator')"
-                alt="Finance Compliance Coordinator"
-                class="avatar-img"
-              />
-              <span v-else>FN</span>
-            </div>
-            <div class="name">TBD</div>
-            <div class="title">Finance &amp; Compliance Coordinator</div>
-            <div class="bio">
-              Ensures accurate financial reporting, grant documentation, and
-              alignment with workforce and education compliance requirements.
             </div>
           </div>
         </div>
