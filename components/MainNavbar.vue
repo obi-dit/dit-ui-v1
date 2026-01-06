@@ -73,6 +73,13 @@
           >
         </li>
         <li>
+          <NuxtLink
+            to="/program-outcomes"
+            class="hover:text-secondary transition"
+            >Program Outcomes</NuxtLink
+          >
+        </li>
+        <li>
           <NuxtLink to="/contact" class="hover:text-secondary transition"
             >Contact</NuxtLink
           >
@@ -108,6 +115,9 @@
       >
       <NuxtLink to="/organization-chart" class="hover:text-secondary transition"
         >Organization</NuxtLink
+      >
+      <NuxtLink to="/program-outcomes" class="hover:text-secondary transition"
+        >Program Outcomes</NuxtLink
       >
       <NuxtLink to="/contact" class="hover:text-secondary transition"
         >Contact</NuxtLink

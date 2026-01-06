@@ -27,6 +27,7 @@ export default defineNuxtRouteMiddleware((to) => {
     "programs-enroll",
     "programs",
     "programs-success",
+    "program-outcomes",
   ];
 
   // Redirect logged-in users away from auth pages
