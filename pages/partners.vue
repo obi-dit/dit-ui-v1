@@ -42,9 +42,7 @@
           We're always looking to expand our network of partners who share our
           mission of making technology education accessible to all.
         </p>
-        <NuxtLink to="/contact" class="cta-button">
-          Get in Touch
-        </NuxtLink>
+        <NuxtLink to="/contact" class="cta-button"> Get in Touch </NuxtLink>
       </div>
     </div>
 
@@ -118,7 +116,7 @@ const getTagClass = (tag: string): string => {
 .pages.entry.partners {
   background: #002a5c;
   color: #ffffff;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   overflow-y: auto;
   padding: 0;
 }
@@ -325,4 +323,3 @@ h1 {
   }
 }
 </style>
-

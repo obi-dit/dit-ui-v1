@@ -556,7 +556,7 @@ const exportToJSON = () => {
 .pages.entry.program-outcomes-page {
   background: #002a5c;
   color: #ffffff;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   overflow-y: auto;
   padding: 0;
 }
