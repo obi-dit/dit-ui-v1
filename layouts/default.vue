@@ -15,6 +15,7 @@ const unloggedRoutes = ref([
   "index",
   "programs",
   "programs-enroll",
+  "program-outcomes",
   "organization-chart",
   "student-support-team",
 ]);
