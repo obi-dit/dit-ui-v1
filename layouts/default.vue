@@ -18,6 +18,7 @@ const unloggedRoutes = ref([
   "program-outcomes",
   "organization-chart",
   "student-support-team",
+  "partners",
 ]);
 const routeName = computed(() => route.name);
 console.log("log", routeName.value);

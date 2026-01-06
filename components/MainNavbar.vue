@@ -80,6 +80,11 @@
           >
         </li>
         <li>
+          <NuxtLink to="/partners" class="hover:text-secondary transition"
+            >Partners</NuxtLink
+          >
+        </li>
+        <li>
           <NuxtLink to="/contact" class="hover:text-secondary transition"
             >Contact</NuxtLink
           >
@@ -118,6 +123,9 @@
       >
       <NuxtLink to="/program-outcomes" class="hover:text-secondary transition"
         >Program Outcomes</NuxtLink
+      >
+      <NuxtLink to="/partners" class="hover:text-secondary transition"
+        >Partners</NuxtLink
       >
       <NuxtLink to="/contact" class="hover:text-secondary transition"
         >Contact</NuxtLink

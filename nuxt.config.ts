@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         "/organization-chart",
         "/student-support-team",
         "/program-outcomes",
+        "/partners",
       ],
     },
   },
