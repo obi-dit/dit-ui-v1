@@ -23,7 +23,7 @@
               <span v-else>{{ getInitials("Daryl Reynolds", "DR") }}</span>
             </div>
             <div class="name">Daryl Reynolds</div>
-            <div class="title">School Director / CEO, CIO and COB</div>
+            <div class="title">CEO, CIO and COB</div>
             <div class="bio">
               Founder and executive leader guiding strategy, partnerships,
               growth, and student impact across all DIT programs.
