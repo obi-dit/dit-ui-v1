@@ -3,7 +3,8 @@
     <div class="outcomes-container">
       <h1>Program Outcomes & Metrics</h1>
       <div class="subtitle">
-        Annual and quarterly performance metrics for all DIT programs (2024-2025)
+        Annual and quarterly performance metrics for all DIT programs
+        (2024-2025)
       </div>
 
       <!-- Annual Summary Section -->
@@ -28,11 +29,15 @@
             </div>
             <div class="metric-row">
               <span class="metric-label">Completions:</span>
-              <span class="metric-value">{{ formatMetricValue(program.completions) }}</span>
+              <span class="metric-value">{{
+                formatMetricValue(program.completions)
+              }}</span>
             </div>
             <div class="metric-row">
-              <span class="metric-label">Placements:</span>
-              <span class="metric-value">{{ formatMetricValue(program.placements) }}</span>
+              <span class="metric-label">Job Placements:</span>
+              <span class="metric-value">{{
+                formatMetricValue(program.placements)
+              }}</span>
             </div>
             <div v-if="program.completionRate" class="metric-row">
               <span class="metric-label">Completion Rate:</span>
@@ -67,9 +72,13 @@
                     <div
                       class="bar bar-trained"
                       :style="{
-                        height: getBarHeight(program.studentsTrained, maxValue) + '%',
+                        height:
+                          getBarHeight(program.studentsTrained, maxValue) + '%',
                       }"
-                      :title="`Trained: ${formatMetricValue(program.studentsTrained, true)}`"
+                      :title="`Trained: ${formatMetricValue(
+                        program.studentsTrained,
+                        true
+                      )}`"
                     ></div>
                     <span class="bar-value">{{
                       formatMetricValue(program.studentsTrained, true)
@@ -79,9 +88,13 @@
                     <div
                       class="bar bar-completed"
                       :style="{
-                        height: getBarHeight(program.completions, maxValue) + '%',
+                        height:
+                          getBarHeight(program.completions, maxValue) + '%',
                       }"
-                      :title="`Completed: ${formatMetricValue(program.completions, true)}`"
+                      :title="`Completed: ${formatMetricValue(
+                        program.completions,
+                        true
+                      )}`"
                     ></div>
                     <span class="bar-value">{{
                       formatMetricValue(program.completions, true)
@@ -91,9 +104,13 @@
                     <div
                       class="bar bar-placed"
                       :style="{
-                        height: getBarHeight(program.placements, maxValue) + '%',
+                        height:
+                          getBarHeight(program.placements, maxValue) + '%',
                       }"
-                      :title="`Placed: ${formatMetricValue(program.placements, true)}`"
+                      :title="`Placed: ${formatMetricValue(
+                        program.placements,
+                        true
+                      )}`"
                     ></div>
                     <span class="bar-value">{{
                       formatMetricValue(program.placements, true)
@@ -133,8 +150,10 @@
                       class="bar bar-trained"
                       :style="{
                         height:
-                          getBarHeight(helpdeskAnnual.studentsTrained, helpdeskMax) +
-                          '%',
+                          getBarHeight(
+                            helpdeskAnnual.studentsTrained,
+                            helpdeskMax
+                          ) + '%',
                       }"
                       :title="`Trained: ${helpdeskAnnual.studentsTrained}`"
                     ></div>
@@ -148,11 +167,16 @@
                       class="bar bar-completed"
                       :style="{
                         height:
-                          getBarHeight(helpdeskAnnual.completions, helpdeskMax) + '%',
+                          getBarHeight(
+                            helpdeskAnnual.completions,
+                            helpdeskMax
+                          ) + '%',
                       }"
                       :title="`Completed: ${helpdeskAnnual.completions}`"
                     ></div>
-                    <span class="bar-value">{{ helpdeskAnnual.completions }}</span>
+                    <span class="bar-value">{{
+                      helpdeskAnnual.completions
+                    }}</span>
                     <div class="bar-label">Completed</div>
                   </div>
                   <div class="bar-container">
@@ -160,11 +184,14 @@
                       class="bar bar-placed"
                       :style="{
                         height:
-                          getBarHeight(helpdeskAnnual.placements, helpdeskMax) + '%',
+                          getBarHeight(helpdeskAnnual.placements, helpdeskMax) +
+                          '%',
                       }"
                       :title="`Placed: ${helpdeskAnnual.placements}`"
                     ></div>
-                    <span class="bar-value">{{ helpdeskAnnual.placements }}</span>
+                    <span class="bar-value">{{
+                      helpdeskAnnual.placements
+                    }}</span>
                     <div class="bar-label">Placed</div>
                   </div>
                 </div>
@@ -198,11 +225,15 @@
               </div>
               <div class="metric-row">
                 <span class="metric-label">Completed:</span>
-                <span class="metric-value">{{ formatMetricValue(quarter.completions) }}</span>
+                <span class="metric-value">{{
+                  formatMetricValue(quarter.completions)
+                }}</span>
               </div>
               <div class="metric-row">
                 <span class="metric-label">Placed:</span>
-                <span class="metric-value">{{ formatMetricValue(quarter.placements) }}</span>
+                <span class="metric-value">{{
+                  formatMetricValue(quarter.placements)
+                }}</span>
               </div>
             </div>
           </div>
@@ -229,7 +260,10 @@
                               getQuarterlyMax(program)
                             ) + '%',
                         }"
-                        :title="`Trained: ${formatMetricValue(quarter.studentsTrained, true)}`"
+                        :title="`Trained: ${formatMetricValue(
+                          quarter.studentsTrained,
+                          true
+                        )}`"
                       ></div>
                       <span class="bar-value">{{
                         formatMetricValue(quarter.studentsTrained, true)
@@ -245,7 +279,10 @@
                               getQuarterlyMax(program)
                             ) + '%',
                         }"
-                        :title="`Completed: ${formatMetricValue(quarter.completions, true)}`"
+                        :title="`Completed: ${formatMetricValue(
+                          quarter.completions,
+                          true
+                        )}`"
                       ></div>
                       <span class="bar-value">{{
                         formatMetricValue(quarter.completions, true)
@@ -261,7 +298,10 @@
                               getQuarterlyMax(program)
                             ) + '%',
                         }"
-                        :title="`Placed: ${formatMetricValue(quarter.placements, true)}`"
+                        :title="`Placed: ${formatMetricValue(
+                          quarter.placements,
+                          true
+                        )}`"
                       ></div>
                       <span class="bar-value">{{
                         formatMetricValue(quarter.placements, true)
@@ -297,7 +337,9 @@
         </p>
         <div class="export-buttons">
           <button class="export-btn" @click="exportToCSV">Export as CSV</button>
-          <button class="export-btn" @click="exportToJSON">Export as JSON</button>
+          <button class="export-btn" @click="exportToJSON">
+            Export as JSON
+          </button>
         </div>
       </section>
     </div>
@@ -380,7 +422,12 @@ const buildMetricsData = (): MetricRecord[] => {
 
 const allMetrics = buildMetricsData();
 
-const programs = ["Helpdesk Support", "Systems Administration", "AI Essentials", "IT Fundamentals"];
+const programs = [
+  "Helpdesk Support",
+  "Systems Administration",
+  "AI Essentials",
+  "IT Fundamentals",
+];
 
 const annualMetrics = computed(() => {
   return allMetrics
@@ -447,7 +494,10 @@ const formatPercentage = (rate: number | null | undefined): string => {
   return `${(rate * 100).toFixed(0)}%`;
 };
 
-const formatMetricValue = (value: number | null | undefined, forChart: boolean = false): string | number => {
+const formatMetricValue = (
+  value: number | null | undefined,
+  forChart: boolean = false
+): string | number => {
   if (value === null || value === undefined) {
     return forChart ? 0 : "TBD";
   }
@@ -867,4 +917,3 @@ h1 {
   }
 }
 </style>
-
