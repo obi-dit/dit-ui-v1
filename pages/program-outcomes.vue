@@ -330,7 +330,7 @@
       </section>
 
       <!-- Data Export Section -->
-      <section class="export-section">
+      <!-- <section class="export-section">
         <h2 class="section-title">Export Data</h2>
         <p class="export-note">
           Download the complete metrics dataset for further analysis.
@@ -341,7 +341,7 @@
             Export as JSON
           </button>
         </div>
-      </section>
+      </section> -->
     </div>
 
     <Footer />
