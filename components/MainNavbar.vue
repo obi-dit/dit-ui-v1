@@ -47,6 +47,11 @@
       <!-- Navigation Links (Desktop) -->
       <ul class="hidden md:flex space-x-8 text-sm font-medium">
         <li>
+          <NuxtLink to="/" class="hover:text-secondary transition"
+            >Home</NuxtLink
+          >
+        </li>
+        <li>
           <NuxtLink
             to="https://lms.diversityintechnology.org/chamilo/chamilo/"
             class="hover:text-secondary transition"
@@ -107,6 +112,7 @@
       v-if="isOpen"
       class="md:hidden flex flex-col gap-4 mt-4 px-6 pb-4 bg-primary"
     >
+      <NuxtLink to="/" class="hover:text-secondary transition">Home</NuxtLink>
       <NuxtLink to="/programs" class="hover:text-secondary transition"
         >Student Portal</NuxtLink
       >
