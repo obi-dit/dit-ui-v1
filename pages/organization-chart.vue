@@ -59,7 +59,7 @@
               />
               <span v-else>{{ getInitials("Vanessa", "VA") }}</span>
             </div>
-            <div class="name">Vanessa</div>
+            <div class="name">Vanessa Saraspe-Martinez</div>
             <div class="title">Vocational School Director and R&D</div>
             <div class="bio">
               Oversees curriculum, instructors, and teaching quality to ensure
@@ -94,7 +94,7 @@
               />
               <span v-else>AB</span>
             </div>
-            <div class="name">Abdul</div>
+            <div class="name">Abdul-Ganiw Abdul-Karim</div>
             <div class="title">Technology Training Supervisor and R&D</div>
             <div class="bio">
               Leads AI innovation, workforce research, and development of new
