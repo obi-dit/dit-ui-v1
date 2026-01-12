@@ -113,7 +113,9 @@
       class="md:hidden flex flex-col gap-4 mt-4 px-6 pb-4 bg-primary"
     >
       <NuxtLink to="/" class="hover:text-secondary transition">Home</NuxtLink>
-      <NuxtLink to="/programs" class="hover:text-secondary transition"
+      <NuxtLink
+        to="https://lms.diversityintechnology.org/chamilo/chamilo/"
+        class="hover:text-secondary transition"
         >Student Portal</NuxtLink
       >
       <NuxtLink to="/about" class="hover:text-secondary transition"
