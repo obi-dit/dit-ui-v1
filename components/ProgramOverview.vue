@@ -42,7 +42,7 @@ const programs = [
     link: "/programs",
   },
   {
-    title: "Google IT Fundamentals",
+    title: "IT Fundamentals",
     ageRange: "18–24",
     description:
       "An IT Support program, trains individuals to provide technical assistance to users of computer systems and software.",
