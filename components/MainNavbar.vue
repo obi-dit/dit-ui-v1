@@ -124,7 +124,7 @@
       <NuxtLink
         to="/student-support-team"
         class="hover:text-secondary transition"
-        >Support Team</NuxtLink
+        >Research & Development Team</NuxtLink
       >
       <NuxtLink to="/organization-chart" class="hover:text-secondary transition"
         >Organization</NuxtLink
