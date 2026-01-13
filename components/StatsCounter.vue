@@ -39,6 +39,13 @@ const counters = ref([
     current: 0,
     icon: "check-circle", // Ensure it's registered or exists
   },
+
+  {
+    label: "Program Hybrid",
+    value: 1,
+    current: 0,
+    icon: "laptop", // Ensure it's registered or exists
+  },
 ]);
 
 function animateCounter(item: any) {
