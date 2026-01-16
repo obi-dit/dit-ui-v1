@@ -36,6 +36,9 @@
         <h4 class="font-semibold text-lg mb-3">Contact Us</h4>
         <p>306 South 7th Street<br />Suite 209B, Tacoma, WA 98402</p>
         <p class="mt-2">
+          750 South Orange Blossom Train Suite 115<br />Orlando FL 32805
+        </p>
+        <p class="mt-2">
           Email:
           <a href="mailto:info@diversityintechnology.org" class="underline"
             >info@diversityintechnology.org</a
