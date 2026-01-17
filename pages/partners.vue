@@ -65,13 +65,16 @@ useHead({
 
 const partners: Partner[] = [
   {
-    tag: "Community Partner",
+    tag: "Proud Sponsor/Community Partner",
     name: "Urban League of Baltimore Maryland",
-    type: "Community & Workforce Development Partner",
+    type: "Community Partner",
     desc:
-      "The Urban League of Baltimore supports DIT in expanding AI and IT workforce " +
+      "* The Urban League of Baltimore supports DIT in expanding AI and IT workforce " +
       "readiness programs for youth and young adults, focused on low-income and " +
-      "historically underrepresented communities.",
+      "historically underrepresented communities. " +
+      "* Supported by a Community Donation. " +
+      "* Community Sponsor (Donor). " +
+      "* In partnership with Urban League affiliates (community support).",
     focus:
       "WIOA youth training, AI Essentials cohorts, Helpdesk Support pathways, " +
       "community outreach and recruitment.",
