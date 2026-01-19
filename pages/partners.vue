@@ -69,7 +69,7 @@ const partners: Partner[] = [
     name: "Urban League of Baltimore Maryland",
     type: "Community Partner",
     desc:
-      "Diversity In Technology (DIT) is honored to be supported through sponsorship from the Urban League" +
+      "Diversity In Technology (DIT) is honored to be supported through sponsorship from the Urban League. " +
       "This sponsorship helps strengthen access to technology training and workforce " +
       "development opportunities for underserved youth and young adults. " +
       "DIT appreciates the Urban League’s continued commitment to educational advancement, career readiness " +
