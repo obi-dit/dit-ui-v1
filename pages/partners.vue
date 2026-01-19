@@ -4,7 +4,7 @@
       <h1>Our Partners</h1>
       <div class="subtitle">
         DIT collaborates with community, industry, and faith-based organizations
-        to expand technology education and workforce opportunities.
+        to expand technology education and workforce  for underserved youth and young adults.
       </div>
 
       <div class="partners-grid">
@@ -65,19 +65,19 @@ useHead({
 
 const partners: Partner[] = [
   {
-    tag: "Proud Sponsor/Community Partner",
+    tag: "Urban League Sponsorship",
     name: "Urban League of Baltimore Maryland",
     type: "Community Partner",
     desc:
-      "* The Urban League of Baltimore supports DIT in expanding AI and IT workforce " +
-      "readiness programs for youth and young adults, focused on low-income and " +
-      "historically underrepresented communities. " +
-      "* Supported by a Community Donation. " +
-      "* Community Sponsor (Donor). " +
-      "* In partnership with Urban League affiliates (community support).",
+      "The UrDiversity In Technology (DIT) is honored to be supported through sponsorship from the Urban League" +
+      "This sponsorship helps strengthen access to technology training and workforce " +
+      "development opportunities for underserved youth and young adults. " +
+      "DIT appreciates the Urban League’s continued commitment to educational advancement, career readiness " +
+      "career readiness and economic mobility within the communities we serve. ",
+      
     focus:
-      "WIOA youth training, AI Essentials cohorts, Helpdesk Support pathways, " +
-      "community outreach and recruitment.",
+      "Access to technology training, workforce development opportunities, " +
+      "educational advancement, and economic mobility for underserved youth and young adults.",
   },
   {
     tag: "Industry Partner",
