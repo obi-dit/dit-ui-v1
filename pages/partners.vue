@@ -64,21 +64,7 @@ useHead({
 });
 
 const partners: Partner[] = [
-  {
-    tag: "Urban League Sponsorship",
-    name: "Urban League of Baltimore Maryland",
-    type: "Community Partner",
-    desc:
-      "Diversity In Technology (DIT) is honored to be supported through sponsorship from the Urban League. " +
-      "This sponsorship helps strengthen access to technology training and workforce " +
-      "development opportunities for underserved youth and young adults. " +
-      "DIT appreciates the Urban League’s continued commitment to educational advancement, career readiness " +
-      "career readiness and economic mobility within the communities we serve. ",
-      
-    focus:
-      "Access to technology training, workforce development opportunities, " +
-      "educational advancement, and economic mobility for underserved youth and young adults.",
-  },
+ 
   {
     tag: "Industry Partner",
     name: "3i Premier MSP – Wyom",
