@@ -92,7 +92,11 @@
           <p class="text-white">
             306 South 7th Street<br />
             Suite 209B<br />
-            Tacoma, WA 98402
+            Tacoma, WA 98402.
+          </p>
+
+          <p class="mt-4 text-white">
+          750 South Orange Blossom Trail Suite 115<br />Orlando FL 32805.
           </p>
         </div>
 
