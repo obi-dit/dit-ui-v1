@@ -89,6 +89,16 @@ const partners: Partner[] = [
       "Digital inclusion, global outreach, education and ministry integration, " +
       "technology access for underserved communities.",
   },
+
+  {
+    tag: "Partner",
+    name: "DIT Digital Studios",
+    type: "Digital Studio Partner",
+    desc: "DIT Digital Studios is a  fully self-contained, web-based platform designed " +
+    "to serve as a production and training hub to capture, store and manage original content including podcasts, video tutorials" +
+     "and capstone projects",
+    focus: "Production and training hub for DIT's AI Essentials and Technology Programs.",
+  }
 ];
 
 const getTagClass = (tag: string): string => {
