@@ -91,9 +91,9 @@ const partners: Partner[] = [
   },
 
   {
-    tag: "Partner",
+    tag: "Industry Partner",
     name: "DIT Digital Studios",
-    type: "Digital Studio Partner",
+    type: "Production and Training Hub",
     desc: "DIT Digital Studios is a  fully self-contained, web-based platform designed " +
     "to serve as a production and training hub to capture, store and manage original content including podcasts, video tutorials" +
      "and capstone projects",
