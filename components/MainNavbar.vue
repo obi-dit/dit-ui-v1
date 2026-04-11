@@ -53,7 +53,7 @@
         </li>
         <li>
           <NuxtLink
-            to="https://lms.diversityintechnology.org/chamilo/chamilo/"
+            to="https://elearn.diversityintech.org"
             class="hover:text-secondary transition"
             >Student Portal</NuxtLink
           >
@@ -114,7 +114,7 @@
     >
       <NuxtLink to="/" class="hover:text-secondary transition">Home</NuxtLink>
       <NuxtLink
-        to="https://lms.diversityintechnology.org/chamilo/chamilo/"
+        to="https://elearn.diversityintech.org"
         class="hover:text-secondary transition"
         >Student Portal</NuxtLink
       >
