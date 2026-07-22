@@ -140,6 +140,7 @@ export default defineNuxtConfig({
       publicPath: process.env.NUXT_PUBLIC_PATH,
       apiUrl: process.env.NUXT_API_URL,
       websocketUrl: process.env.NUXT_WEBSOCKET_URL,
+      microsoftFormsUrl: process.env.NUXT_MICROSOFT_FORMS_URL,
     },
   },
 
