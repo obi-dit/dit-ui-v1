@@ -229,15 +229,15 @@
           <div class="card">
             <div class="avatar">
               <img
-                v-if="getAvatarImage('Human Resources Coordinator')"
-                :src="getAvatarImage('Human Resources Coordinator')"
+                v-if="getAvatarImage('Venu')"
+                :src="getAvatarImage('Venu')"
                 alt="Human Resources Coordinator"
                 class="avatar-img"
               />
-              <span v-else>FN</span>
+              <span v-else>VE</span>
             </div>
-            <div class="name">Vacant</div>
-            <div class="title">Human Resources</div>
+            <div class="name">Venugopal GOVINDU</div>
+            <div class="title">Director of Human Resources</div>
             <div class="bio">
               Manages recruitment, employee relations, benefits administration,
               and organizational development to support DIT's growing team.
@@ -378,7 +378,7 @@ import vanessaImage from "@/assets/pngs/Vanessa.png";
 import babatundeImage from "@/assets/pngs/Babatunde.png";
 import obiImage from "@/assets/pngs/Obi.png";
 import daryl from "@/assets/pngs/Daryl.png";
-
+import venuImage from "@/assets/pngs/Venu.png";
 useHead({
   title: "DIT Org Chart - Leadership & Departments",
 });
@@ -391,6 +391,7 @@ const avatarImages: Record<string, string> = {
   Babatunde: babatundeImage,
   Obi: obiImage,
   Daryl: daryl,
+  Venu: venuImage,
   // Add more team members' images here as they become available
   // "Daryl Reynolds": darylImage,
   // "Vanessa": vanessaImage,
