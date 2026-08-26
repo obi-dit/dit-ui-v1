@@ -77,7 +77,7 @@
                       }"
                       :title="`Trained: ${formatMetricValue(
                         program.studentsTrained,
-                        true
+                        true,
                       )}`"
                     ></div>
                     <span class="bar-value">{{
@@ -93,7 +93,7 @@
                       }"
                       :title="`Completed: ${formatMetricValue(
                         program.completions,
-                        true
+                        true,
                       )}`"
                     ></div>
                     <span class="bar-value">{{
@@ -109,7 +109,7 @@
                       }"
                       :title="`Placed: ${formatMetricValue(
                         program.placements,
-                        true
+                        true,
                       )}`"
                     ></div>
                     <span class="bar-value">{{
@@ -152,7 +152,7 @@
                         height:
                           getBarHeight(
                             helpdeskAnnual.studentsTrained,
-                            helpdeskMax
+                            helpdeskMax,
                           ) + '%',
                       }"
                       :title="`Trained: ${helpdeskAnnual.studentsTrained}`"
@@ -169,7 +169,7 @@
                         height:
                           getBarHeight(
                             helpdeskAnnual.completions,
-                            helpdeskMax
+                            helpdeskMax,
                           ) + '%',
                       }"
                       :title="`Completed: ${helpdeskAnnual.completions}`"
@@ -257,12 +257,12 @@
                           height:
                             getBarHeight(
                               quarter.studentsTrained,
-                              getQuarterlyMax(program)
+                              getQuarterlyMax(program),
                             ) + '%',
                         }"
                         :title="`Trained: ${formatMetricValue(
                           quarter.studentsTrained,
-                          true
+                          true,
                         )}`"
                       ></div>
                       <span class="bar-value">{{
@@ -276,12 +276,12 @@
                           height:
                             getBarHeight(
                               quarter.completions,
-                              getQuarterlyMax(program)
+                              getQuarterlyMax(program),
                             ) + '%',
                         }"
                         :title="`Completed: ${formatMetricValue(
                           quarter.completions,
-                          true
+                          true,
                         )}`"
                       ></div>
                       <span class="bar-value">{{
@@ -295,12 +295,12 @@
                           height:
                             getBarHeight(
                               quarter.placements,
-                              getQuarterlyMax(program)
+                              getQuarterlyMax(program),
                             ) + '%',
                         }"
                         :title="`Placed: ${formatMetricValue(
                           quarter.placements,
-                          true
+                          true,
                         )}`"
                       ></div>
                       <span class="bar-value">{{
@@ -402,12 +402,12 @@ const buildMetricsData = (): MetricRecord[] => {
 
   addProgramRows("Helpdesk Support", "18+");
   addProgramRows("Systems Administration", "18+");
-  addProgramRows("AI Essentials", "14–17");
-  addProgramRows("IT Fundamentals", "14–17");
+  addProgramRows("AI Essentials", "14+");
+  addProgramRows("IT Fundamentals", "14+");
 
   // Add known Helpdesk annual metrics
   const hdAnnual = records.find(
-    (r) => r.program === "Helpdesk Support" && r.periodType === "Annual"
+    (r) => r.program === "Helpdesk Support" && r.periodType === "Annual",
   );
   if (hdAnnual) {
     hdAnnual.studentsTrained = 10;
@@ -456,7 +456,7 @@ const maxValue = computed(() => {
   return Math.max(
     ...annualMetrics.value.map((m) => m.studentsTrained ?? 0),
     ...annualMetrics.value.map((m) => m.completions ?? 0),
-    ...annualMetrics.value.map((m) => m.placements ?? 0)
+    ...annualMetrics.value.map((m) => m.placements ?? 0),
   );
 });
 
@@ -464,13 +464,13 @@ const helpdeskMax = computed(() => {
   return Math.max(
     helpdeskAnnual.value.studentsTrained,
     helpdeskAnnual.value.completions,
-    helpdeskAnnual.value.placements
+    helpdeskAnnual.value.placements,
   );
 });
 
 const getQuarterlyData = (program: string) => {
   return allMetrics.filter(
-    (m) => m.program === program && m.periodType === "Quarterly"
+    (m) => m.program === program && m.periodType === "Quarterly",
   );
 };
 
@@ -480,7 +480,7 @@ const getQuarterlyMax = (program: string) => {
     ...quarterly.map((q) => q.studentsTrained ?? 0),
     ...quarterly.map((q) => q.completions ?? 0),
     ...quarterly.map((q) => q.placements ?? 0),
-    1 // Minimum 1 to avoid division by zero
+    1, // Minimum 1 to avoid division by zero
   );
 };
 
@@ -496,7 +496,7 @@ const formatPercentage = (rate: number | null | undefined): string => {
 
 const formatMetricValue = (
   value: number | null | undefined,
-  forChart: boolean = false
+  forChart: boolean = false,
 ): string | number => {
   if (value === null || value === undefined) {
     return forChart ? 0 : "TBD";

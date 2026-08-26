@@ -256,14 +256,14 @@
           <div class="card">
             <div class="avatar">
               <img
-                v-if="getAvatarImage('Finance Compliance Coordinator')"
-                :src="getAvatarImage('Finance Compliance Coordinator')"
+                v-if="getAvatarImage('Venu')"
+                :src="getAvatarImage('Venu')"
                 alt="Student Services Coordinator"
                 class="avatar-img"
               />
-              <span v-else>FN</span>
+              <span v-else>VE</span>
             </div>
-            <div class="name">Vacant</div>
+            <div class="name">Venugopal GOVINDU</div>
             <div class="title">Student Admissions</div>
             <div class="bio">
               Oversees student enrollment processes, application reviews, and
