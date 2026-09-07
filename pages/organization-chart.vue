@@ -283,14 +283,14 @@
           <div class="card">
             <div class="avatar">
               <img
-                v-if="getAvatarImage('General Counsel')"
-                :src="getAvatarImage('General Counsel')"
+                v-if="getAvatarImage('keisha')"
+                :src="getAvatarImage('keisha')"
                 alt="General Counsel"
                 class="avatar-img"
               />
               <span v-else>GC</span>
             </div>
-            <div class="name">Vacant</div>
+            <div class="name">Keisha</div>
             <div class="title">General Counsel</div>
             <div class="bio">
               Provides legal advice and compliance for DIT's operations and
@@ -379,6 +379,7 @@ import babatundeImage from "@/assets/pngs/Babatunde.png";
 import obiImage from "@/assets/pngs/Obi.png";
 import daryl from "@/assets/pngs/Daryl.png";
 import venuImage from "@/assets/pngs/Venu.png";
+import keishaImage from "@/assets/pngs/keisha.png";
 useHead({
   title: "DIT Org Chart - Leadership & Departments",
 });
@@ -392,6 +393,7 @@ const avatarImages: Record<string, string> = {
   Obi: obiImage,
   Daryl: daryl,
   Venu: venuImage,
+  keisha: keishaImage,
   // Add more team members' images here as they become available
   // "Daryl Reynolds": darylImage,
   // "Vanessa": vanessaImage,
