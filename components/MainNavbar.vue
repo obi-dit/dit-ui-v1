@@ -114,7 +114,7 @@
     >
       <NuxtLink to="/" class="hover:text-secondary transition">Home</NuxtLink>
       <NuxtLink
-        to="http://elearn.diversityintech.org"
+        to="https://elearn.diversityintech.org/chamilo/chamilo"
         class="hover:text-secondary transition"
         >Student Portal</NuxtLink
       >
